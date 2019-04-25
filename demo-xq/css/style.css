@@ -1,0 +1,12 @@
+body {
+    font-family: Meiryo, "メイリオ", "Hiragino Kaku Gothic ProN", Verdana, Arial, Helvetica, sans-serif;
+}
+.navbar {}
+
+.img-responsive {
+    display: inline-block;
+    height: 37.5px;
+    min-height: 35.5px;
+    min-width: 120px;
+
+  }
