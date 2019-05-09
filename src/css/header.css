@@ -92,8 +92,12 @@
     flex-wrap: nowrap;
   }
 
+  .navbar-center .menu-item .item-txt {
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+    margin-right: 2.5px;
+  }
+
   .menu-item:hover {
-    text-decoration: underline;
     color: #264989c5;
     transition-duration: 0.2s;
     transition-timing-function: ease-in-out;
@@ -105,11 +109,16 @@
     transition-timing-function: ease-in-out;
   }
 
-  .menu-item:hover>span>i {
+  .menu-item:hover>span>svg {
     transition: all .2s;
     transform: rotate(180deg);
     transition-duration: 0.2s;
     transition-timing-function: ease-out;
+  }
+
+  .menu-item:hover>.item-txt{
+    
+    border-bottom: 2px solid #264989;
   }
 
   .menu-item>ul {
@@ -146,6 +155,7 @@
     display: block;
     font-size: 14px;
     transition: all .2s 0s cubic-bezier(.165, .84, .44, 1);
+    text-align: left;
   }
 
   .expand:hover>ul {
@@ -173,6 +183,11 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    text-decoration: none;
+  }
+
+  .expand>ul>li>a>svg {
+    margin-right: 10px;
   }
 
   .expand>ul>li:hover>a {
@@ -180,7 +195,7 @@
     text-decoration: none;
   }
 
-  .expand>ul>li:hover>a>i {
+  .expand>ul>li:hover>a>svg {
     color: #fff;
     text-decoration: none;
   }
@@ -192,20 +207,26 @@
     position: relative;
   }
 
-  .nav-lan:hover>div>i {
+  .nav-lan .lan-txt {
+    margin-right: 2.5px;
+    border-bottom: 2px solid #ffffff00;
+  }
+
+  .nav-lan:hover>span>svg {
     transition-duration: 0.2s;
     transition-timing-function: ease-out;
     transform: rotate(180deg);
   }
 
   .nav-lan:hover {
-    text-decoration: underline;
     color: #264989c5;
     cursor: pointer;
     transition-duration: 0.2s;
     transition-timing-function: ease-out;
   }
-
+  .nav-lan:hover> .lan-txt {
+    border-bottom: 2px solid #264989ca;
+  }
   .nav-lan .lan-select {
     display: none;
     list-style: none;
@@ -216,6 +237,7 @@
     background-color: #fff;
     opacity: 1;
     transition: all .2s 0s cubic-bezier(.165, .84, .44, 1);
+    margin: 0;
   }
 
   .nav-lan .lan-select>li>a {
@@ -231,7 +253,6 @@
   }
 
   .nav-lan .lan-select>li>a:hover {
-    text-decoration: underline;
     color: #333;
   }
 
@@ -393,11 +414,18 @@
   }
 
   .svg-down {
+    transform: rotate(90deg);
     transition-duration: 0.2s;
     transition-timing-function: ease-in-out;
   }
 
-  .menu-item:hover>span>i {
+  .menu-item:hover>span>svg {
+    transform: rotate(180deg);
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+  }
+
+  #svg-down:hover {
     transform: rotate(180deg);
     transition-duration: 0.2s;
     transition-timing-function: ease-out;
@@ -628,7 +656,7 @@
     bottom: -5px;
   }
 
-  .nav-lan .lan-select>li{
+  .nav-lan .lan-select>li {
     width: 33.3%;
     float: left;
   }
