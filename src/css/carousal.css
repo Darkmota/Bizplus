@@ -1,0 +1,105 @@
+.carousal {
+  width: 100%;
+  height: calc(100vh - 80px);
+  /* margin: 0 auto; */
+  /*设置在页面水平居中*/
+  overflow: hidden;
+  position: relative;
+}
+
+.ant-carousel {}
+
+.ant-carousel .slide-img img {
+  width: 100%;
+  height: calc(100vh - 80px);
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.carousal .btn-prev {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  margin-top: -40px;
+  /*设置垂直居中*/
+  color: white;
+  opacity: 0.7;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.05);
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  z-index: 1;
+  outline: none;
+  border: 0;
+  transition: all 0.25s;
+}
+
+.carousal .btn-next {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  margin-top: -40px;
+  /*设置垂直居中*/
+  color: white;
+  opacity: 0.7;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.05);
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  z-index: 1;
+  outline: none;
+  border: 0;
+  transition: all 0.25s;
+}
+
+.carousal .btn-prev:hover {
+  color: white;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.25);
+  transition: all 0.25s;
+}
+
+.carousal .btn-next:hover {
+  color: white;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.25);
+  transition: all 0.25s;
+}
+
+.carousal .slide-img h1 {
+  color: #fff;
+  z-index: 3;
+}
+
+.carousal .areatxt div {
+  position: absolute;
+  top: 80px;
+  left: 5%;
+  width: 90%;
+  margin: 0 auto;
+  color: white;
+  background: rgba(0, 0, 0, 0.05);
+  font-size: 30px;
+  font-weight: bold;
+  /* text-align: center; */
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousal .areatxt div.active {
+  color: #fff;
+}
+
+.carousal .areatxt div h1 {
+  color: #fff;
+}
