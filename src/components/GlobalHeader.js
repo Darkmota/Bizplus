@@ -20,7 +20,30 @@ class GlobelHeader extends Component {
     constructor () {
       super()
       this.state = {
-        locale: zh_CN
+        //字体语言state
+        locale: zh_CN,
+
+        //二级菜单state
+        isFold : true,
+        left:'-80%'
+
+      }
+      this.handleFoldClick = this.handleFoldClick.bind(this);
+    }
+
+    //二级菜单展开/收起
+    handleFoldClick() {
+      if(this.state.isFold === false) {
+        this.setState({
+          isFold : true,
+          left:'-80%'
+        })
+      }
+      else if(this.state.isFold === true) {
+        this.setState({
+          isFold : false,
+          left:'0%'
+        })
       }
     }
 
@@ -31,7 +54,7 @@ class GlobelHeader extends Component {
             <div className="g-navbar">
               <div className="g-nav">
                 <div className="left-fold">
-                  <img src="./imgs/icon-fold.svg" className="img-fold" id="btn-fold"/>
+                  <img src="./imgs/icon-fold.svg" className="img-fold" id="btn-fold" onClick={this.handleFoldClick}/>
                 </div>
                 <div className="nav-logo ">
                   <a className="navbar-brand " href="#">
@@ -113,7 +136,7 @@ class GlobelHeader extends Component {
               </div>
             </div>
 
-            <div className="second-menu">
+            <div className="second-menu" style={{left:this.state.left,transition: '.35s all'}}>
 
               <div className="second-menu-item caps">{ this.state.locale.homepage }</div>
               <div className="second-menu-item caps expand">
@@ -128,7 +151,7 @@ class GlobelHeader extends Component {
                   <li><a href="#"><FontAwesomeIcon icon={faArrowRight} />{ this.state.locale.privacy_policy }</a></li>
                   <li><a href="#"><FontAwesomeIcon icon={faArrowRight} />{ this.state.locale.organizational_chart }</a></li>
                   <li><a href="#"><FontAwesomeIcon icon={faArrowRight} />{ this.state.locale.access }</a></li>
-                <li><a href="#"><FontAwesomeIcon icon={faArrowRight} />{ this.state.locale.company_culture }</a></li>
+                  <li><a href="#"><FontAwesomeIcon icon={faArrowRight} />{ this.state.locale.company_culture }</a></li>
                       
                 </ul>
               </div>
@@ -152,10 +175,9 @@ class GlobelHeader extends Component {
                   <FontAwesomeIcon icon={faAngleDown} />  
                 </span>
                 <ul>
-                  <li><a href="#">{ this.state.locale.education }<i className="fas fa-arrow-right"></i></a></li>
-                        <li><a href="#"><FontAwesomeIcon icon={faArrowRight} />{ this.state.locale.leisure_and_entertainment }</a>
-                        </li>
-                        <li><a href="#"><FontAwesomeIcon icon={faArrowRight} />{ this.state.locale.medical_insurance }</a></li>
+                  <li><a href="#"><FontAwesomeIcon icon={faArrowRight} />{ this.state.locale.education }</a></li>
+                  <li><a href="#"><FontAwesomeIcon icon={faArrowRight} />{ this.state.locale.leisure_and_entertainment }</a></li>
+                  <li><a href="#"><FontAwesomeIcon icon={faArrowRight} />{ this.state.locale.medical_insurance }</a></li>
                 </ul>
               </div>
               <div className="second-menu-item caps">{ this.state.locale.recruitment_information }</div>
