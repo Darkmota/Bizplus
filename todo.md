@@ -248,3 +248,8 @@ service nginx restart
   - [ ] 优化手机端二级菜单布局
   - [ ] 添加平板端语言栏展开/收起功能
 
+
+###谢强
+  - [x] react项目中PC端header组件化,按键操作
+  - [x] react项目中轮播图组件化,控制轮播图
+  - [x] header的响应式布局,断点测试
