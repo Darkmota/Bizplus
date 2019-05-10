@@ -1,0 +1,11 @@
+.header-PC {
+  height: 80px;
+  background-color: #fff;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.125);
+  /* z-index: 1; */
+}
+
+.nav {
+  height: 80px;
+  border: 1px dotted #111;
+}
