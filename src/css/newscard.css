@@ -1,0 +1,50 @@
+/* news-common */
+.news-card {
+  padding: 10px;
+}
+
+.news-card .topics-content {
+  margin: 0;
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.topics-content a {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  text-decoration: underline;
+}
+
+.topics-content a:hover {
+  color: #333;
+  text-decoration: none;
+  opacity: 0.75;
+  transition-duration: .25s;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity, text-decoration;
+}
+
+.topics-tag {
+  /* news 标签 */
+  /* height: 20px; */
+  font-size: 15px;
+  
+  display: inline-block;
+  padding: 0.1em 0.5em ;
+  background: #feca15;
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border-radius: 5px;
+}
+
+.topics-time {
+  padding: 10px;
+}
+
+/* new-common */

@@ -1,13 +1,18 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Meiryo, "メイリオ", "Hiragino Kaku Gothic ProN", Verdana, Arial, Helvetica, sans-serif;
+* {
+  font-family: "微软雅黑", "黑体", 'Nunito', 'Roboto', 'M PLUS Rounded 1c', 'Kosugi Maru', "メイリオ", "Hiragino Kaku Gothic ProN", Verdana, Arial, Helvetica, sans-serif;
+}
 
+body {
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.caps {
+  /* 大写字母 */
+  text-transform: uppercase;
 }

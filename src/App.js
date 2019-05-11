@@ -1,19 +1,17 @@
-import React from 'react'
+import React from "react";
 
-import GlobalHedaer from './components/GlobalHeader'
-import Carousal from './components/Carousal'
-import Config from './config/config'
+import GlobalHedaer from "./components/GlobalHeader";
+import HomePage from "./views/HomePage";
 
-function App() {
-  return (
-    <div className="App">
-      <GlobalHedaer />
-      <div className="main-container">
-        {/* Carousal */}
-        <Carousal />
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <GlobalHedaer />
+        <HomePage />
       </div>
-    </div>
-  )
+    );
+  }
 }
 
-export default App
+export default App;

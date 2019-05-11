@@ -1,0 +1,15 @@
+.part-title {
+  text-align: center;
+  display: block;
+  font-size: 20px;
+  margin-top: 1rem;
+}
+
+/* 区域title */
+.part-title hr {
+  margin-top: 1rem;
+  background-color: #264989;
+  height: 3px;
+  width: 160px;
+}
+

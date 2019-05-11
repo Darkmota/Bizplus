@@ -253,3 +253,7 @@ service nginx restart
   - [x] react项目中PC端header组件化,按键操作
   - [x] react项目中轮播图组件化,控制轮播图
   - [x] header的响应式布局,断点测试
+
+## 2019-5-11
+###谢强
+  - [x] 首页板块拆分且组件化 PS改动很大

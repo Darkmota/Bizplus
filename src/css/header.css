@@ -13,6 +13,10 @@
   background-color: #fff;
   /* transition: all .9s 0s cubic-bezier(.165, .84, .44, 1); */
 }
+.caps {
+  /* 大写字母 */
+  text-transform: uppercase;
+}
 
 @media screen and (min-width:1200px) {
 
@@ -275,6 +279,11 @@
   .nav-search {
     transition-duration: 0.2s;
     transition-timing-function: ease-in;
+
+  }
+
+  .nav-search .search-click {
+    user-select: none;
   }
 
   .nav-search .search-click .search-on {
