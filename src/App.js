@@ -2,6 +2,8 @@ import React from "react";
 
 import GlobalHedaer from "./components/GlobalHeader";
 import HomePage from "./views/HomePage";
+import Footer from "./components/Footer";
+import "./css/normalize.css";
 
 class App extends React.Component {
   render() {
@@ -9,6 +11,7 @@ class App extends React.Component {
       <div className="App">
         <GlobalHedaer />
         <HomePage />
+        <Footer />
       </div>
     );
   }

@@ -4,7 +4,7 @@ import zh_CN from "../locale/zh_CN.json";
 import en_US from "../locale/en_US.json";
 import ja_JP from "../locale/ja_JP.json";
 
-import "../css/normalize.css";
+
 // import "../css/common.css";
 import "../css/fold.css";
 import "../css/header.css";
