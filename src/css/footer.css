@@ -1,0 +1,176 @@
+/* footer 2 */
+.footer a {
+  color: #fff;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+@media screen and (min-width: 760px) {
+  .footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #012334;
+  }
+
+  .footer-inner {
+    width: 95%;
+  }
+
+  .colophon__wrapper {
+    width: 100%;
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .colophon__wrapper a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .colophon__links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    order: -1;
+    width: 450px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .colophon__links li {
+    border-right: 1px solid hsla(0, 0%, 100%, 0.5);
+    height: 14px;
+    line-height: 1;
+    width: auto;
+    padding: 0 15px;
+  }
+
+  .colophon__links :last-child {
+    border-right: none;
+  }
+
+  .colophon__social {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    max-width: 150px;
+    color: #fff;
+  }
+
+  .colophon__social>l1 {
+    color: black;
+    margin-right: 5px;
+  }
+
+  .colophon__social i {
+    margin-top: 5px;
+    font-size: 24px;
+    padding: 0.1rem 0.5rem;
+  }
+
+  .colophon__wrapper {
+    font-size: 14px;
+    color: #fff;
+  }
+
+  .fade-out {
+    opacity: 0.5;
+    transition-duration: 0.6s;
+    transition-property: opacity, -webkit-transform;
+    transition-property: transform, opacity;
+  }
+
+  .fade-out:hover {
+    opacity: 1;
+    transition-duration: 0.6s;
+    transition-property: opacity, -webkit-transform;
+    transition-property: transform, opacity;
+  }
+}
+
+@media screen and (max-width: 760px) {
+
+  .footer {
+    width: 100%;
+    display: block;
+    background-color: #012334;
+  }
+
+  .footer-inner {
+    width: 100%;
+  }
+
+  .colophon__wrapper {
+    width: 100%;
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+  }
+
+ 
+
+  .colophon__links {
+    list-style: none;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .colophon__links li {
+    display: block;
+    margin-bottom: 20px;
+    margin: 0 auto;
+  }
+
+  .colophon__social {
+    padding: 0;
+    list-style: none;
+    color: #fff;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .colophon__social l1 {}
+
+  .colophon__social i {}
+
+  .colophon__wrapper {
+    font-size: 14px;
+    color: #fff;
+  }
+  .colophon__wrapper a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .fade-out {
+    opacity: 0.5;
+    transition-duration: 0.6s;
+    transition-property: opacity, -webkit-transform;
+    transition-property: transform, opacity;
+  }
+
+  .fade-out:hover {
+    opacity: 1;
+    transition-duration: 0.6s;
+    transition-property: opacity, -webkit-transform;
+    transition-property: transform, opacity;
+  }
+}
