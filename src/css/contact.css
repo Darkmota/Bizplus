@@ -1,0 +1,184 @@
+@media screen and (min-width:760px) {
+
+  /* contact-section  */
+  .contact {
+    margin-top: 2rem;
+    background-image: url("https://picsum.photos/600");
+    /* background-size: 100% ; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+  }
+
+  .contact::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background-color: black;
+    opacity: 0.5;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .contact .line {
+    position: relative;
+    width: 100%;
+    z-index: 5;
+    /* display: flex;
+    flex-direction: row; */
+  }
+
+  .contact .line .line-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contact .line .line-inner .line-txt-l {
+    width: 100%;
+    margin: 15px;
+  }
+
+  .contact .line .line-inner .line-txt-r {
+    width: 100%;
+    margin: 15px;
+  }
+
+  .line .line-inner .txt-item {
+    height: 200px;
+    border-radius: 0.45rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.135);
+    background-color: #fff;
+    padding: 20px;
+  }
+
+  .line .line-inner .txt-item h4 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .line .line-inner .txt-item p {
+    font-size: 18px;
+    padding: 5px 10px;
+    margin: 0;
+  }
+
+  .line .line-inner .txt-item a {
+    font-size: 20px;
+    color: #333;
+    text-decoration: underline;
+  }
+
+  .line .line-inner .txt-item a:hover {
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 0.75;
+    transition-duration: 0.25s;
+    transition-property: opacity;
+    transition-timing-function: ease-in-out;
+  }
+
+  .line .line-inner .txt-item div {
+    font-size: 14px;
+
+  }
+}
+
+
+@media screen and (max-width:760px) {
+
+  /* contact-section  */
+  .contact {
+    margin-top: 2rem;
+    background-image: url("https://picsum.photos/600");
+    /* background-size: 100% ; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+  }
+
+  .contact::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background-color: black;
+    opacity: 0.5;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .contact .line {
+    position: relative;
+    width: 100%;
+    display: block;
+    z-index: 5;
+  }
+
+  .contact .line .line-inner {
+    display: block;
+  }
+
+  .contact .line .line-inner .line-txt-l {
+    width: 100%;
+    margin-bottom: 15px;
+
+  }
+
+  .contact .line .line-inner .line-txt-r {
+    width: 100%;
+
+  }
+
+  .line .line-inner .txt-item {
+    border-radius: 0.45rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.135);
+    background-color: #fff;
+    padding: 10px;
+  }
+
+  .line .line-inner .txt-item h4 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .line .line-inner .txt-item p {
+    font-size: 14px;
+    padding: 5px 10px;
+    margin: 0;
+  }
+
+  .line .line-inner .txt-item a {
+    font-size: 20px;
+    color: #333;
+    text-decoration: underline;
+  }
+
+  .line .line-inner .txt-item a:hover {
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 0.75;
+    transition-duration: 0.25s;
+    transition-property: opacity;
+    transition-timing-function: ease-in-out;
+  }
+
+  .line .line-inner .txt-item div {
+    font-size: 14px;
+
+  }
+}

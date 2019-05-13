@@ -6,6 +6,7 @@ import AboutUs from "../components/AboutUs";
 import CardMask from "../components/CardMask";
 import CardBasic from "../components/CardBasic";
 import NewsCard from "../components/NewsCard";
+import Contact from "../components/Contact";
 import Map from "../components/Map";
 
 import "./HomePage.css";
@@ -175,6 +176,7 @@ class HomePage extends Component {
           </ul>
           <BtnMore name={"了解更多"} />
         </div>
+        
         {/* news */}
         <div className="news">
           <div className="news-content">
@@ -215,10 +217,14 @@ class HomePage extends Component {
           </div>
           <BtnMore {...this.state.btnInfo} />
         </div>
+        {/* contact  */}
+        <Contact />
         {/* maps */}
         <div className="map">
+        <PartTitle title={"where we are?"} />
           <Map />
         </div>
+        
       </div>
     );
   }
