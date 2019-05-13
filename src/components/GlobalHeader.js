@@ -31,6 +31,10 @@ class GlobelHeader extends Component {
       isFold: true,
       left: "-80%",
 
+      //二级菜单子元素state
+      isItemFold: true,
+      itemDisplay: "none",
+
       //search按钮控制input
       searchFlag: false,
       display: "none",
@@ -38,6 +42,7 @@ class GlobelHeader extends Component {
       isXShow: false
     };
     this.handleFoldClick = this.handleFoldClick.bind(this);
+    this.handleItemFoldClick = this.handleItemFoldClick.bind(this);
     this.handleSearchClick = this.handleSearchClick.bind(this);
   }
 
@@ -52,6 +57,21 @@ class GlobelHeader extends Component {
       this.setState({
         isFold: false,
         left: "0%"
+      });
+    }
+  }
+
+  //二级菜单内容展开/收起
+  handleItemFoldClick(e) {
+    if (this.state.isItemFold === false) {
+      this.setState({
+        isItemFold: true,
+        itemDisplay: "none"
+      });
+    } else if (this.state.isItemFold === true) {
+      this.setState({
+        isItemFold: false,
+        itemDisplay: "block"
       });
     }
   }
@@ -369,13 +389,14 @@ class GlobelHeader extends Component {
           <div className="second-menu-item caps">
             {this.state.locale.homepage}
           </div>
-          <div className="second-menu-item caps expand">
+
+          <div className="second-menu-item caps expand" onClick={this.handleItemFoldClick}>
             <span>
               {this.state.locale.information}
               <FontAwesomeIcon icon={faAngleDown} />
             </span>
             <div className="second-menu-information" />
-            <ul>
+            <ul style={{ display: this.state.itemDisplay, transition: ".35s all" }}>
               <li>
                 <a href="#">
                   <FontAwesomeIcon icon={faArrowRight} />
@@ -420,12 +441,13 @@ class GlobelHeader extends Component {
               </li>
             </ul>
           </div>
-          <div className="second-menu-item caps expand">
+
+          <div className="second-menu-item caps expand" onClick={this.handleItemFoldClick}>
             <span>
               {this.state.locale.business_field}
               <FontAwesomeIcon icon={faAngleDown} />
             </span>
-            <ul>
+            <ul style={{ display: this.state.itemDisplay, transition: ".35s all" }}>
               <li>
                 <a href="#">
                   <FontAwesomeIcon icon={faArrowRight} />
@@ -477,12 +499,13 @@ class GlobelHeader extends Component {
               </li>
             </ul>
           </div>
-          <div className="second-menu-item caps expand">
+
+          <div className="second-menu-item caps expand" onClick={this.handleItemFoldClick}>
             <span>
               {this.state.locale.welfare}
               <FontAwesomeIcon icon={faAngleDown} />
             </span>
-            <ul>
+            <ul style={{ display: this.state.itemDisplay, transition: ".35s all" }}>
               <li>
                 <a href="#">
                   <FontAwesomeIcon icon={faArrowRight} />
@@ -503,9 +526,11 @@ class GlobelHeader extends Component {
               </li>
             </ul>
           </div>
+
           <div className="second-menu-item caps">
             {this.state.locale.recruitment_information}
           </div>
+
           <div className="second-menu-item caps">
             {this.state.locale.contact_us}
           </div>
