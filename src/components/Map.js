@@ -59,7 +59,7 @@ const handleApiLoaded = (map, maps, places) => {
         },
         map
       })
-    );
+  );
 
     infowindows.push(
       new maps.InfoWindow({
@@ -113,9 +113,9 @@ class Map extends Component {
           bootstrapURLKeys={{ key: "AIzaSyD89pzZjSgZCdOv_STBBR6jSWaObqwGNRM" }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
-          onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps, places)}
+          // onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps, places)}
         >
-          <AnyReactComponent lat={35.691948} lng={139.718789} text="Bizpuls" />
+          
         </GoogleMapReact>
         
       </div>

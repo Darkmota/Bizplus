@@ -15,8 +15,8 @@ class Carousal extends Component {
       <div className="carousal">
         <div className="areatxt">
           <div className="active">
-            <h1>1111</h1>
-            <p>111</p>
+            <h1>Bizplus</h1>
+            <p>新しい技術に絶えず挑戦し、ユニークな発想を大切にする</p>
           </div>
         </div>
         <div

@@ -176,7 +176,7 @@ class HomePage extends Component {
           </ul>
           <BtnMore name={"了解更多"} />
         </div>
-        
+
         {/* news */}
         <div className="news">
           <div className="news-content">
@@ -220,11 +220,10 @@ class HomePage extends Component {
         {/* contact  */}
         <Contact />
         {/* maps */}
-        <div className="map">
         <PartTitle title={"where we are?"} />
+        <div className="map">
           <Map />
         </div>
-        
       </div>
     );
   }
