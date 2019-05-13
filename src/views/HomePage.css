@@ -1,4 +1,4 @@
-@media screen and (min-width:760px) {
+@media screen and (min-width:850px) {
 
   /* serve */
   .cards-container {
@@ -118,7 +118,7 @@
 }
 
 
-@media screen and (max-width:760px) {
+@media screen and (max-width:850px) {
 
   /* 小于760px */
   /* serve and team */
