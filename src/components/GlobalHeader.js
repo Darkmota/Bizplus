@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-
+import { connect } from 'react-redux'
+import { withRouter, Route, Link } from 'react-router-dom'
 import zh_CN from "../locale/zh_CN.json";
 import en_US from "../locale/en_US.json";
 import ja_JP from "../locale/ja_JP.json";
-
-
+import RouteName from '../config/RouteName'
 // import "../css/common.css";
 import "../css/fold.css";
 import "../css/header.css";
@@ -19,6 +19,7 @@ import {
   faSearch,
   faTimes
 } from "@fortawesome/fontawesome-free-solid";
+console.table(RouteName)
 
 class GlobelHeader extends Component {
   constructor() {
@@ -44,6 +45,11 @@ class GlobelHeader extends Component {
     this.handleFoldClick = this.handleFoldClick.bind(this);
     this.handleItemFoldClick = this.handleItemFoldClick.bind(this);
     this.handleSearchClick = this.handleSearchClick.bind(this);
+  }
+
+  goRoute = (link, event) => {
+    event.stopPropagation()
+    this.props.history.push(`${link}`)
   }
 
   //二级菜单展开/收起
@@ -122,156 +128,39 @@ class GlobelHeader extends Component {
             </div>
             <div className="nav-menu">
               <div className="navbar-center">
-                <div className="menu-item caps">
-                  <span className="item-txt">{this.state.locale.homepage}</span>
-                </div>
-                <div className="menu-item caps expand">
-                  <span className="item-txt">
-                    {this.state.locale.information}
-                  </span>
-                  <span>
-                    <FontAwesomeIcon icon={faAngleDown} className="svg-down" />
-                  </span>
-                  <div className="menu-information" />
-                  <ul>
-                    <li>
-                      <a href="#">
-                        <FontAwesomeIcon icon={faArrowRight} />
-                        {this.state.locale.company_profile}
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <FontAwesomeIcon icon={faArrowRight} />
-                        {this.state.locale.business_philosophy}
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <FontAwesomeIcon icon={faArrowRight} />
-                        {this.state.locale.representative_s_greetings}
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <FontAwesomeIcon icon={faArrowRight} />
-                        {this.state.locale.privacy_policy}
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <FontAwesomeIcon icon={faArrowRight} />
-                        {this.state.locale.organizational_chart}
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <FontAwesomeIcon icon={faArrowRight} />
-                        {this.state.locale.access}
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <FontAwesomeIcon icon={faArrowRight} />
-                        {this.state.locale.company_culture}
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="menu-item caps expand">
-                  <span className="item-txt">
-                    {this.state.locale.business_field}
-                  </span>
-                  <span>
-                    <FontAwesomeIcon icon={faAngleDown} className="svg-down" />
-                  </span>
-                  <ul>
-                    <li>
-                      <a href="#">
-                        <FontAwesomeIcon icon={faArrowRight} />
-                        {this.state.locale.business_summary}
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <FontAwesomeIcon icon={faArrowRight} />
-                        {this.state.locale.quality_control}
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <FontAwesomeIcon icon={faArrowRight} />
-                        {this.state.locale.project_management}
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <FontAwesomeIcon icon={faArrowRight} />
-                        {this.state.locale.development_language_and_environment}
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <FontAwesomeIcon icon={faArrowRight} />
-                        {this.state.locale.foreign_temporary_staffing_business}
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <FontAwesomeIcon icon={faArrowRight} />
-                        {this.state.locale.commission_proposal}
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <FontAwesomeIcon icon={faArrowRight} />
-                        {this.state.locale.other_business}
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <FontAwesomeIcon icon={faArrowRight} />
-                        {this.state.locale.development_performance}
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="menu-item caps expand">
-                  <span className="item-txt">{this.state.locale.welfare}</span>
-                  <span>
-                    <FontAwesomeIcon icon={faAngleDown} className="svg-down" />
-                  </span>
-                  <ul>
-                    <li>
-                      <a href="#">
-                        <FontAwesomeIcon icon={faArrowRight} />
-                        {this.state.locale.education}
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <FontAwesomeIcon icon={faArrowRight} />
-                        {this.state.locale.leisure_and_entertainment}
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <FontAwesomeIcon icon={faArrowRight} />
-                        {this.state.locale.medical_insurance}
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="menu-item caps">
-                  <span className="item-txt">
-                    {this.state.locale.recruitment_information}
-                  </span>
-                </div>
-                <div className="menu-item caps">
-                  <span className="item-txt">
-                    {this.state.locale.contact_us}
-                  </span>
-                </div>
+                {
+                  RouteName.map(route => (
+                    <div onClick={this.goRoute.bind(this, `/${route.name}`)} key={route.name} className={'menu-item caps' + (route.children ? ' expand' : '')}>
+                      <span className="item-txt">
+                        {this.state.locale[route.name]}
+                      </span>
+                      {
+                        route.children
+                        ?
+                        <>
+                          <span>
+                            <FontAwesomeIcon icon={faAngleDown} className="svg-down" />
+                          </span>
+                          <div className="menu-information" />
+                          <ul>
+                            {
+                              route.children.map(child => (
+                                <li key={child}>
+                                  <a href="#" onClick={this.goRoute.bind(this, `/${route.name}/${child}`)}>
+                                    <FontAwesomeIcon icon={faArrowRight} />
+                                    {this.state.locale[child]}
+                                  </a>
+                                </li>
+                              ))
+                            }
+                          </ul>
+                        </>
+                        :
+                        <></>
+                      }
+                    </div>
+                  ))
+                }
                 <div className="nav-right">
                   <div className="nav-lan" style={{ marginRight: "15px" }}>
                     <div className="lan-txt">{this.state.locale.language}</div>
@@ -574,4 +463,11 @@ class GlobelHeader extends Component {
   }
 }
 
-export default GlobelHeader;
+
+const mapStateToProps = state => ({
+})
+
+const mapStateToDispatch = dispatch => ({
+})
+
+export default withRouter(connect(mapStateToProps, mapStateToDispatch)(GlobelHeader))

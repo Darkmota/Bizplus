@@ -156,7 +156,7 @@ class HomePage extends Component {
           <div className="cards-container">
             <div className="cards-inner">
               {this.state.cardServeInfo.map(info => (
-                <div className="cards-item">
+                <div className="cards-item" key={info.key}>
                   <CardMask {...info} />
                 </div>
               ))}
@@ -169,7 +169,7 @@ class HomePage extends Component {
           <PartTitle title={"our works"} />
           <ul className="work_ul">
             {this.state.workInfo.map(info => (
-              <li className="">
+              <li key={info.key}>
                 <CardBasic {...info} />
               </li>
             ))}
@@ -183,7 +183,7 @@ class HomePage extends Component {
             <PartTitle title={"our news"} />
             <ul className="news-list">
               {this.state.newsInfo.map(info => (
-                <li className="">
+                <li key={info.key}>
                   <NewsCard {...info} />
                 </li>
               ))}
@@ -196,7 +196,7 @@ class HomePage extends Component {
           <PartTitle title={"our events"} />
           <ul className="event_ul">
             {this.state.eventInfo.map(info => (
-              <li className="">
+              <li key={info.key}>
                 <CardBasic {...info} />
               </li>
             ))}
@@ -209,7 +209,7 @@ class HomePage extends Component {
           <div className="cards-container">
             <div className="cards-inner">
               {this.state.cardServeInfo.map(info => (
-                <div className="cards-item">
+                <div className="cards-item" key={info.key}>
                   <CardMask {...info} />
                 </div>
               ))}
