@@ -9,92 +9,20 @@
   }
 }
 
-@media screen and (max-width:1200px) and (min-width:760px) {
-  .second-menu-nav {
-    display: none;
-  }
-
+@media screen and (max-width:1200px) {
   .left-fold {
     display: flex;
   }
 
   .img-fold {
-    width: 32.5px;
+    width: 800%;
     height: auto;
     cursor: pointer;
   }
 
   .second-menu {
-    width: 80%;
-    height: 100%;
-    background-color: #fff;
-    position: fixed;
-    top: 80px;
-    z-index: 9;
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-
-  .second-menu-item {
-    margin: 22.5px;
-    margin-top: 50px;
-    cursor: pointer;
-  }
-
-  .second-menu-item:hover {
-    color: #ccc;
-  }
-
-  .expand>ul {
-    display: none;
-    font-weight: normal;
-    padding: 10px 1rem 10px 1rem;
-    background-color: #fff;
-    opacity: 1;
-  }
-
-  .expand>ul>li {
     width: 100%;
-    font-size: 14px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .expand>ul>li>a {
-    display: block;
-    width: 100%;
-    color: #333;
-    margin: 0;
-    padding: 0.6rem 0 0.6rem 0;
-  }
-
-  .expand>ul>li:hover>a {
-    color: #ccc;
-    text-decoration: none;
-  }
-
-  .expand>ul>li:hover>a>i {
-    color: #ccc;
-    text-decoration: none;
-  }
-
-}
-
-@media screen and (max-width:760px) {
-  .left-fold {
-    display: flex;
-  }
-
-  .img-fold {
-    width: 80%;
-    height: auto;
-    cursor: pointer;
-  }
-
-  .second-menu {
-    width: 80%;
-    height:72%;
+    height:100%;
     background-color: #fff;
     position: fixed;
     top: 80px;
@@ -144,12 +72,9 @@
   }
 
   .second-menu-nav {
-    width: 80%;
+    width: 100%;
     height: 20%;
-    display: flex;
     justify-content: center;
-    position: fixed;
-    bottom: 0px;
     background-color: #fff;
   }
 

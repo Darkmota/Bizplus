@@ -353,212 +353,9 @@
 }
 
 
-@media screen and (max-width:1199.8px) and (min-width:760px) {
+@media screen and (max-width:1200px) {
 
-  /* 页面1200px~760px */
-  .g-nav {
-    display: flex;
-    width: 95%;
-    height: 80px;
-    background-color: #fff;
-    box-sizing: border-box;
-    padding: 0;
-    justify-content: space-between;
-  }
-
-  .g-nav .img-responsive {
-    width: 32.5px;
-    height: auto;
-  }
-
-  .logo-font {
-    font-size: 32px;
-    font-weight: 600;
-    margin-left: 5px;
-  }
-
-  .nav-menu,
-  .nav-logo .nav-right {
-    padding: 0;
-  }
-
-  .nav-logo {
-    /* width: 70%; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* padding: 15px 0 10px 20%; */
-  }
-
-  .nav-logo .img-responsive {
-    width: 32px;
-    height: auto;
-    margin: 0;
-  }
-
-  .nav-menu {
-    display: none;
-  }
-
-  .nav-pad {
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .svg-down {
-    transform: rotate(90deg);
-    transition-duration: 0.2s;
-    transition-timing-function: ease-in-out;
-  }
-
-  .svg-down:hover {
-    transform: rotate(180deg);
-    transition-duration: 0.2s;
-    transition-timing-function: ease-out;
-  }
-
-  .nav-lan {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-
-  .nav-lan .lan-txt {
-    margin-right: 2.5px;
-    border: 2px solid #ffffff00;
-  }
-
-  .nav-lan:hover>span>svg {
-    transition-duration: 0.2s;
-    transition-timing-function: ease-out;
-    transform: rotate(180deg);
-  }
-
-  .nav-lan:hover {
-    color: #264989c5;
-    cursor: pointer;
-    transition-duration: 0.2s;
-    transition-timing-function: ease-out;
-  }
-
-  .nav-lan:hover>.lan-txt {
-    border-bottom: 2px solid #264989ca;
-  }
-
-  .nav-lan .lan-select {
-    display: none;
-    list-style: none;
-    font-weight: normal;
-    padding: 10px 1rem 10px 1rem;
-    border-radius: 0.45rem;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.135);
-    background-color: #fff;
-    opacity: 1;
-    transition: all .2s 0s cubic-bezier(.165, .84, .44, 1);
-    margin: 0;
-  }
-
-  .nav-lan .lan-select>li {
-    padding: 2.5px;
-  }
-
-  .nav-lan .lan-select>li>a {
-    text-decoration: none;
-    color: #333;
-  }
-
-  .nav-lan:hover>.lan-select {
-    display: block;
-    position: absolute;
-    top: 80px;
-    left: -15px;
-    z-index: 2;
-  }
-
-  .nav-lan .lan-select>li>a:hover {
-    color: #333;
-    text-decoration: underline;
-  }
-
-  .nav-search:hover {
-    cursor: pointer;
-    opacity: 0.75;
-    color: #264989;
-    transition: all .2s cubic-bezier(.165, .84, .44, 1);
-  }
-
-  .nav-search {
-    transition-duration: 0.2s;
-    transition-timing-function: ease-in;
-  }
-
-  .nav-search .search-click .search-on {
-    width: 18px;
-    height: 18px;
-    display: block;
-    opacity: 1;
-  }
-
-  .nav-search .search-click .search-off {
-    width: 18px;
-    height: 18px;
-    display: none;
-    opacity: 1;
-  }
-
-  .search-input {
-    position: absolute;
-    top: 80px;
-    right: 10px;
-    padding: 1rem 2rem 1rem 2rem;
-    border-radius: 0.45rem;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.135);
-    background-color: #fff;
-    display: none;
-
-  }
-
-  .search-input input {
-    outline: none;
-    background: transparent;
-    border-radius: 0.45rem;
-    border: 1px solid #264989;
-    padding: 5px;
-  }
-
-  .search-input button {
-    color: #264989;
-    margin-left: 8px;
-    padding: 6px;
-    padding: 7px 1rem 7px 1rem;
-    border: 2px solid #264989c7;
-    border-radius: 0.45rem;
-    background-color: #fff;
-    outline: none;
-    font-size: 16px;
-    transition-property: background-color, color;
-    transition-duration: 0.25s;
-    transition-timing-function: ease-in-out;
-  }
-
-  .search-input button:hover {
-    cursor: pointer;
-    color: #fff;
-    background-color: #264989;
-    transition-property: background-color, color;
-    transition-duration: 0.25s;
-    transition-timing-function: ease-in-out;
-  }
-
-  /* 页面1200px~760px */
-}
-
-@media screen and (max-width:759.8px) {
-
-  /* 页面小于760 */
+  /* 页面小于1200px */
   .g-nav {
     display: flex;
     width: 95%;
@@ -585,7 +382,7 @@
   }
 
   .nav-logo {
-    width: 85%;
+    width: 95%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -599,10 +396,6 @@
   }
 
   .nav-menu {
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     display: none;
   }
 
@@ -617,50 +410,19 @@
     flex-wrap: nowrap;
   }
 
-  .navbar-center .menu-item {
-    /* flex-wrap: nowrap; */
-    margin-left: 17.5px;
-    margin-right: 17.5px;
-    /* margin: 22.5px; */
-    color: #333;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-  }
-
-  .menu-item:hover {
-    text-decoration: underline;
-    color: #264989c5;
-    transition-duration: 0.2s;
-    transition-timing-function: ease-in-out;
-    cursor: pointer;
-  }
-
-  .svg-down {
-    transition-duration: 0.2s;
-    transition-timing-function: ease-in-out;
-  }
-
-  .menu-item:hover>span>i {
-    transform: rotate(180deg);
-    transition-duration: 0.2s;
-    transition-timing-function: ease-out;
-  }
-
   .nav-lan .lan-select {
     width: 100%;
     list-style: none;
     font-weight: normal;
     background-color: #fff;
     align-items: center;
-    position: absolute;
-    left: 0px;
-    bottom: -5px;
+    position: relative;
+    top: 130px;
   }
 
   .nav-lan .lan-select>li {
     width: 33.3%;
+    text-align: center;
     float: left;
   }
 
@@ -669,24 +431,12 @@
     color: #333;
   }
 
-  .nav-search:hover {
-    cursor: pointer;
-    opacity: 0.75;
-    color: #264989;
-    transition: all .25s;
-  }
-
-  .nav-search {
-    transition-duration: 0.25s;
-    transition-timing-function: ease-in;
-  }
-
   .search-input {
     width: 100%;
-    position: absolute;
-    bottom: 50px;
-    right: 0;
+    height: 75px;
     padding: 1rem;
+    position: absolute;
+    bottom: 120px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.135);
     background-color: #fff;
   }
@@ -725,6 +475,4 @@
     /* pad模式下的语言切换消失 */
     display: none;
   }
-
-  /* 页面小于760 */
 }

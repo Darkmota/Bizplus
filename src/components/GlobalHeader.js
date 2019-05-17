@@ -28,13 +28,12 @@ class GlobelHeader extends Component {
       //字体语言state
       locale: zh_CN,
 
+      btnExpendDisplay:"block",
+      btnFoldDisplay:"none",
+
       //二级菜单state
       isFold: true,
-      left: "-80%",
-
-      //二级菜单子元素state
-      isItemFold: true,
-      itemDisplay: "none",
+      top: "-100%",
 
       //search按钮控制input
       searchFlag: false,
@@ -43,7 +42,6 @@ class GlobelHeader extends Component {
       isXShow: false
     };
     this.handleFoldClick = this.handleFoldClick.bind(this);
-    this.handleItemFoldClick = this.handleItemFoldClick.bind(this);
     this.handleSearchClick = this.handleSearchClick.bind(this);
   }
 
@@ -57,27 +55,16 @@ class GlobelHeader extends Component {
     if (this.state.isFold === false) {
       this.setState({
         isFold: true,
-        left: "-80%"
+        top: "-100%",
+        btnExpendDisplay:"block",
+        btnFoldDisplay:"none"
       });
     } else if (this.state.isFold === true) {
       this.setState({
         isFold: false,
-        left: "0%"
-      });
-    }
-  }
-
-  //二级菜单内容展开/收起
-  handleItemFoldClick(e) {
-    if (this.state.isItemFold === false) {
-      this.setState({
-        isItemFold: true,
-        itemDisplay: "none"
-      });
-    } else if (this.state.isItemFold === true) {
-      this.setState({
-        isItemFold: false,
-        itemDisplay: "block"
+        top: "80px",
+        btnExpendDisplay:"none",
+        btnFoldDisplay:"block"
       });
     }
   }
@@ -118,6 +105,15 @@ class GlobelHeader extends Component {
                 className="img-fold"
                 id="btn-fold"
                 onClick={this.handleFoldClick}
+                style={{display:this.state.btnFoldDisplay}}
+              />
+              <img 
+                src="./imgs/icon-expend.svg"
+                alt=""
+                className="img-expend"
+                id="btn-expend"
+                onClick={this.handleFoldClick}
+                style={{display:this.state.btnExpendDisplay}}
               />
             </div>
             <div className="nav-logo ">
@@ -273,19 +269,19 @@ class GlobelHeader extends Component {
         {/* 移动端header */}
         <div
           className="second-menu"
-          style={{ left: this.state.left, transition: ".35s all" }}
+          style={{ top: this.state.top, transition: ".35s all" }}
         >
           <div className="second-menu-item caps">
             {this.state.locale.homepage}
           </div>
 
-          <div className="second-menu-item caps expand" onClick={this.handleItemFoldClick}>
+          <div className="second-menu-item caps expand">
             <span>
               {this.state.locale.information}
               <FontAwesomeIcon icon={faAngleDown} />
             </span>
             <div className="second-menu-information" />
-            <ul style={{ display: this.state.itemDisplay, transition: ".35s all" }}>
+            <ul>
               <li>
                 <a href="#">
                   <FontAwesomeIcon icon={faArrowRight} />
@@ -331,12 +327,12 @@ class GlobelHeader extends Component {
             </ul>
           </div>
 
-          <div className="second-menu-item caps expand" onClick={this.handleItemFoldClick}>
+          <div className="second-menu-item caps expand">
             <span>
               {this.state.locale.business_field}
               <FontAwesomeIcon icon={faAngleDown} />
             </span>
-            <ul style={{ display: this.state.itemDisplay, transition: ".35s all" }}>
+            <ul>
               <li>
                 <a href="#">
                   <FontAwesomeIcon icon={faArrowRight} />
@@ -389,12 +385,12 @@ class GlobelHeader extends Component {
             </ul>
           </div>
 
-          <div className="second-menu-item caps expand" onClick={this.handleItemFoldClick}>
+          <div className="second-menu-item caps expand">
             <span>
               {this.state.locale.welfare}
               <FontAwesomeIcon icon={faAngleDown} />
             </span>
-            <ul style={{ display: this.state.itemDisplay, transition: ".35s all" }}>
+            <ul>
               <li>
                 <a href="#">
                   <FontAwesomeIcon icon={faArrowRight} />
