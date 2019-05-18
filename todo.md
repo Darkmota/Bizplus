@@ -294,7 +294,7 @@ service nginx restart
 ## 2019-5-18
 ###谢强
   - [x] Header优化设计
-  - [x] 
+  - [x] recruit页面设计
 
 ###徐鑫雨
   - [x] 整理优化css文件 
