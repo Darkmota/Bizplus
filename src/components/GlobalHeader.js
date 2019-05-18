@@ -236,154 +236,42 @@ class GlobelHeader extends Component {
           style={{ top: this.state.top, transition: ".35s all" }}
         >
           <div style={{height:'80%',overflowY:'scroll'}}>
-          <div className="second-menu-item caps">
-            {this.state.locale.homepage}
-          </div>
 
-          <div className="second-menu-item caps expand">
-              <span>
-                {this.state.locale.information}
-                <FontAwesomeIcon icon={faPlus}  onClick={this.handleExpendClick}/>
-              </span>
-              <ul style={{display:this.state.expendDisplay}}>
-              <li>
-                <a href="#">
-                  <FontAwesomeIcon icon={faArrowRight} />
-                  {this.state.locale.company_profile}
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <FontAwesomeIcon icon={faArrowRight} />
-                  {this.state.locale.business_philosophy}
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <FontAwesomeIcon icon={faArrowRight} />
-                  {this.state.locale.representative_s_greetings}
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <FontAwesomeIcon icon={faArrowRight} />
-                  {this.state.locale.privacy_policy}
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <FontAwesomeIcon icon={faArrowRight} />
-                  {this.state.locale.organizational_chart}
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <FontAwesomeIcon icon={faArrowRight} />
-                  {this.state.locale.access}
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <FontAwesomeIcon icon={faArrowRight} />
-                  {this.state.locale.company_culture}
-                </a>
-              </li>
-            </ul>
-            </div>
-
-          <div className="second-menu-item caps expand">
-            <span>
-              {this.state.locale.business_field}
-              <FontAwesomeIcon icon={faPlus} onClick={this.handleExpendClick}/>
-            </span>
-            <ul style={{display:this.state.expendDisplay}}>
-              <li>
-                <a href="#">
-                  <FontAwesomeIcon icon={faArrowRight} />
-                  {this.state.locale.business_summary}
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <FontAwesomeIcon icon={faArrowRight} />
-                  {this.state.locale.quality_control}
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <FontAwesomeIcon icon={faArrowRight} />
-                  {this.state.locale.project_management}
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <FontAwesomeIcon icon={faArrowRight} />
-                  <FontAwesomeIcon icon={faArrowRight} />
-                  {this.state.locale.development_language_and_environment}
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <FontAwesomeIcon icon={faArrowRight} />
-                  {this.state.locale.foreign_temporary_staffing_business}
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <FontAwesomeIcon icon={faArrowRight} />
-                  {this.state.locale.commission_proposal}
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <FontAwesomeIcon icon={faArrowRight} />
-                  {this.state.locale.other_business}
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <FontAwesomeIcon icon={faArrowRight} />
-                  {this.state.locale.development_performance}
-                </a>
-              </li>
-            </ul>
+          {
+            RouteName.map(route => (
+              <div onClick={this.goRoute.bind(this, `/${route.name}`)} key={route.name} className={'second-menu-item caps' + (route.children ? ' expand' : '')}>
+                <span className="item-txt">
+                  {this.state.locale[route.name]}
+                </span>
+                {
+                  route.children
+                  ?
+                  <>
+                    <span>
+                      <FontAwesomeIcon icon={faAngleDown} className="svg-down" />
+                    </span>
+                    <div className="menu-information" />
+                    <ul>
+                      {
+                        route.children.map(child => (
+                          <li key={child}>
+                            <a href="#" onClick={this.goRoute.bind(this, `/${route.name}/${child}`)}>
+                              <FontAwesomeIcon icon={faArrowRight} />
+                              {this.state.locale[child]}
+                            </a>
+                          </li>
+                        ))
+                      }
+                    </ul>
+                  </>
+                  :
+                  <></>
+                }
+              </div>
+            ))
+          }
           </div>
-
-          <div className="second-menu-item caps expand">
-            <span>
-              {this.state.locale.welfare}
-              <FontAwesomeIcon icon={faPlus} onClick={this.handleExpendClick}/>
-            </span>
-            <ul style={{display:this.state.expendDisplay}}>
-              <li>
-                <a href="#">
-                  <FontAwesomeIcon icon={faArrowRight} />
-                  {this.state.locale.education}
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <FontAwesomeIcon icon={faArrowRight} />
-                  {this.state.locale.leisure_and_entertainment}
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <FontAwesomeIcon icon={faArrowRight} />
-                  {this.state.locale.medical_insurance}
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="second-menu-item caps">
-            {this.state.locale.recruitment_information}
-          </div>
-
-          <div className="second-menu-item caps">
-            {this.state.locale.contact_us}
-          </div>
-          </div>          
+              
           <div className="second-menu-nav">
             <div className="nav-search">
               <div className="search-click">
