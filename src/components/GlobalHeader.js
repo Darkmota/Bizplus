@@ -159,7 +159,9 @@ class GlobelHeader extends Component {
                 }
                 <div className="nav-right">
                   <div className="nav-lan" style={{ marginRight: "15px" }}>
-                    <div className="lan-txt">{this.state.locale.language}</div>
+                    <div className="lan-txt">
+                    <span>{this.state.locale.language}</span>
+                    </div>
                     <span>
                       <FontAwesomeIcon
                         icon={faAngleDown}

@@ -1,0 +1,99 @@
+/* Form Styles */
+
+.form {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  margin: 0;
+}
+
+.form:before,
+.form:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form .field {
+  width: 50%;
+  padding: 20px 20px 5px;
+  border-bottom: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  transition: 0.3s linear;
+}
+
+.form .field:nth-child(2n) {
+  border-left: 1px solid #e5e5e5;
+}
+
+.form .field label {
+  color: #606a73;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.form .field input {
+  outline: none;
+  background: none;
+  width: 100%;
+  border: 0;
+  padding: 5px 0;
+  color: #4C5152;
+  font-family: 'proxima-nova';
+  font-size: 16px;
+  font-weight: 200;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: 0.3s linear;
+}
+
+.form .content {
+  width: 100%;
+  padding: 20px 20px 5px;
+  box-sizing: border-box;
+  transition: 0.3s linear;
+}
+
+
+.form .content label {
+  color: #606a73;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.form .content textarea {
+  outline: none;
+  background: none;
+  width: 100%;
+  border: 0;
+  padding: 5px 0;
+  color: #4C5152;
+  font-family: 'proxima-nova';
+  font-size: 16px;
+  font-weight: 200;
+  resize: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: 0.3s linear;
+}
+.form-button {
+  width: 100%;
+  padding: 20px 20px 5px;
+  border-bottom: 1px solid #e5e5e5;
+  box-sizing: border-box;
+}
+
+.notice {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ec4c4c;
+  line-height: 15.2px;
+}

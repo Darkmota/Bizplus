@@ -117,6 +117,7 @@
     justify-content: center;
     align-items: center;
     background-color: #012334;
+
   }
 
   .footer-inner {
@@ -131,11 +132,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
   }
 
   .colophon__wrapper a {
     text-decoration: none;
     color: #fff;
+    font-size: 12px;
   }
 
   .colophon__links {
@@ -146,6 +149,7 @@
     flex-wrap: wrap;
     text-align: center;
     color: #fff;
+    font-size: 12px;
   }
 
   .colophon__links li {
@@ -154,6 +158,7 @@
     line-height: 1;
     width: auto;
     padding: 0 15px;
+    font-size: 12px;
   }
 
   .colophon__links :last-child {
@@ -232,23 +237,23 @@
   .footer {
     /* margin-top: 100px; */
     width: 100%;
-    height: 155px;
     display: block;
     background-color: #012334;
+    padding: 0;
   }
 
   .footer-inner {
     width: 100%;
-    height: 155px;
   }
 
   .colophon__wrapper {
     width: 100%;
     margin: 0;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     display: flex;
     flex-direction: column;
+    font-size: 12px;
   }
 
 
@@ -261,12 +266,14 @@
     padding: 0;
     margin: 0 auto;
     margin-bottom: 10px;
+    font-size: 12px;
   }
 
   .colophon__links li {
     display: block;
     margin-bottom: 10px;
     margin: 0 auto;
+    font-size: 12px;
   }
 
   .colophon__social {
@@ -285,6 +292,7 @@
   .colophon__wrapper a {
     text-decoration: none;
     color: #fff;
+    font-size: 12px;
   }
 
 }

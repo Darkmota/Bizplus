@@ -1,0 +1,91 @@
+.caps {
+  /* 大写字母 */
+  text-transform: uppercase;
+}
+
+.contact-container {
+  width: 100%;
+}
+
+.page-header {
+  width: 100%;
+  height: calc(55vh);
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-image: url("http://localhost:3000/imgs/main-information.jpg");
+
+}
+
+.title-container {
+  position: absolute;
+  left: 80px;
+  bottom: 0px;
+  width: 300px;
+  background: #fff;
+  padding: 30px 40px;
+}
+
+.title-container h1 {
+  margin: 0;
+}
+
+.title-container svg {
+  position: absolute;
+  max-width: 90px;
+  height: 10px !important;
+  /* top: 45px; */
+}
+
+.breadcrumb {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.breadcrumb .content {
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.breadcrumb .content div {
+  display: flex;
+  justify-content: flex-end;
+  color: #4C5152;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.page-main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* color: #212529; */
+}
+
+.page-main .page-main-container {
+  width: 61.8%;
+}
+
+.page-main-txt {
+  color: #4C5152;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-top: 40px;
+  text-align: center !important;
+}
+
+.page-main-txt .notice {
+  color: #ec4c4c;
+}
+
+.page-main-form {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.page-main-form .main{
+  width: 80%;
+}
