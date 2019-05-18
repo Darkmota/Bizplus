@@ -294,12 +294,8 @@ service nginx restart
 ## 2019-5-18
 ###谢强
   - [x] Header优化设计
-<<<<<<< HEAD
   - [x] recruit页面设计
-=======
-  - [x] 
 
 ###徐鑫雨
   - [x] 整理优化css文件 
   - [x] 移动端二级菜单添加页面跳转
->>>>>>> 223a4fd4c20691d193b1bfbb502e5b3a1c5da380
