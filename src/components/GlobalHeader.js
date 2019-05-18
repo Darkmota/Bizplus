@@ -17,7 +17,9 @@ import {
   faAngleDown,
   faArrowRight,
   faSearch,
-  faTimes
+  faTimes,
+  faBars,
+  faPlus
 } from "@fortawesome/fontawesome-free-solid";
 console.table(RouteName)
 
@@ -34,6 +36,7 @@ class GlobelHeader extends Component {
       //二级菜单state
       isFold: true,
       top: "-100%",
+      expendDisplay:"none",
 
       //search按钮控制input
       searchFlag: false,
@@ -69,6 +72,19 @@ class GlobelHeader extends Component {
     }
   }
 
+  handleExpendClick = (e) => {
+    if(this.state.expendDisplay === "none"){
+      this.setState({
+        expendDisplay:"block"
+      });
+    }
+    if(this.state.expendDisplay === "block"){
+      this.setState({
+        expendDisplay:"none"
+      });
+    }
+  }
+
   //搜索框展开/收起
   handleSearchClick() {
     if (this.state.searchFlag === false) {
@@ -99,24 +115,17 @@ class GlobelHeader extends Component {
           {/* PC端header */}
           <div className="g-nav">
             <div className="left-fold">
-              <img
-                src="./imgs/icon-fold.svg"
-                alt=""
-                className="img-fold"
-                id="btn-fold"
-                onClick={this.handleFoldClick}
-                style={{display:this.state.btnFoldDisplay}}
-              />
-              <img 
-                src="./imgs/icon-expend.svg"
-                alt=""
-                className="img-expend"
-                id="btn-expend"
+              <FontAwesomeIcon icon={faBars} 
+                className="img-btn" 
                 onClick={this.handleFoldClick}
                 style={{display:this.state.btnExpendDisplay}}
-              />
+                 />
+              <FontAwesomeIcon icon={faTimes} 
+                className="img-btn" 
+                onClick={this.handleFoldClick}
+                style={{display:this.state.btnFoldDisplay}} />
             </div>
-            <div className="nav-logo ">
+            <div className="nav-logo">
               <a className="navbar-brand " href="#">
                 <img src="./imgs/Biz.png" className="img-responsive" />
               </a>
@@ -219,71 +228,24 @@ class GlobelHeader extends Component {
                 </div>
               </div>
             </div>
-            <div className="nav-pad">
-              <div
-                className="search-input"
-                style={{
-                  display: this.state.display,
-                  transition: ".35s all"
-                }}
-              >
-                <input type="text" placeholder={this.state.locale.input_here} />
-                <div className="">
-                  <button id="btn-search">
-                    <FontAwesomeIcon icon={faSearch} />
-                  </button>
-                </div>
-              </div>
-              <div className="nav-lan" style={{ marginRight: "15px" }}>
-                <div className="lan-txt">{this.state.locale.language}</div>
-                <span>
-                  <FontAwesomeIcon icon={faAngleDown} id="svg-down" />
-                </span>
-                <ul className="lan-select">
-                  <li>
-                    <a href="./index.html?locale=ja_JP">日本語</a>
-                  </li>
-                  <li>
-                    <a href="./index.html?locale=en_US">English</a>
-                  </li>
-                  <li>
-                    <a href="./index.html?locale=zh_CN">中文</a>
-                  </li>
-                </ul>
-              </div>
-              <div className="nav-search">
-                <div className="search-click" onClick={this.handleSearchClick}>
-                  <FontAwesomeIcon
-                    icon={faSearch}
-                    className={
-                      this.state.isSearchShow ? "search-on" : "search-off"
-                    }
-                  />
-                  <FontAwesomeIcon
-                    icon={faTimes}
-                    className={this.state.isXShow ? "search-on" : "search-off"}
-                  />
-                </div>
-              </div>
-            </div>
           </div>
         </div>
-        {/* 移动端header */}
+        {/* 移动端二级菜单 */}
         <div
           className="second-menu"
           style={{ top: this.state.top, transition: ".35s all" }}
         >
+          <div style={{height:'80%',overflowY:'scroll'}}>
           <div className="second-menu-item caps">
             {this.state.locale.homepage}
           </div>
 
           <div className="second-menu-item caps expand">
-            <span>
-              {this.state.locale.information}
-              <FontAwesomeIcon icon={faAngleDown} />
-            </span>
-            <div className="second-menu-information" />
-            <ul>
+              <span>
+                {this.state.locale.information}
+                <FontAwesomeIcon icon={faPlus}  onClick={this.handleExpendClick}/>
+              </span>
+              <ul style={{display:this.state.expendDisplay}}>
               <li>
                 <a href="#">
                   <FontAwesomeIcon icon={faArrowRight} />
@@ -327,14 +289,14 @@ class GlobelHeader extends Component {
                 </a>
               </li>
             </ul>
-          </div>
+            </div>
 
           <div className="second-menu-item caps expand">
             <span>
               {this.state.locale.business_field}
-              <FontAwesomeIcon icon={faAngleDown} />
+              <FontAwesomeIcon icon={faPlus} onClick={this.handleExpendClick}/>
             </span>
-            <ul>
+            <ul style={{display:this.state.expendDisplay}}>
               <li>
                 <a href="#">
                   <FontAwesomeIcon icon={faArrowRight} />
@@ -390,9 +352,9 @@ class GlobelHeader extends Component {
           <div className="second-menu-item caps expand">
             <span>
               {this.state.locale.welfare}
-              <FontAwesomeIcon icon={faAngleDown} />
+              <FontAwesomeIcon icon={faPlus} onClick={this.handleExpendClick}/>
             </span>
-            <ul>
+            <ul style={{display:this.state.expendDisplay}}>
               <li>
                 <a href="#">
                   <FontAwesomeIcon icon={faArrowRight} />
@@ -421,7 +383,7 @@ class GlobelHeader extends Component {
           <div className="second-menu-item caps">
             {this.state.locale.contact_us}
           </div>
-
+          </div>          
           <div className="second-menu-nav">
             <div className="nav-search">
               <div className="search-click">
