@@ -15,9 +15,9 @@ class ContactUS extends Component {
       <>
         <div className="contact-container">
           {/* 页面顶部布局 */}
-          <div className="page-header">
-            <div className="title-container">
-              <h1 className="page-name caps">contact us</h1>
+          <div className="contact-page-header">
+            <div className="contact-title-container">
+              <h1 className="contact-page-name caps">contact us</h1>
               <svg
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
@@ -79,15 +79,15 @@ class ContactUS extends Component {
             </div>
           </div>
           {/* 面包屑 */}
-          <div className="breadcrumb">
-            <div className="content">
+          <div className="contact-breadcrumb">
+            <div className="contact-content">
               <div>Home / お問い合わせ</div>
             </div>
           </div>
           {/* 主要内容 */}
-          <div className="page-main">
-            <div className="page-main-container">
-              <p className="page-main-txt">
+          <div className="contact-page-main">
+            <div className="contact-page-container">
+              <p className="contact-page-txt">
                 お問い合わせご希望の方は下記フォームよりどうぞ。
                 <br />
                 送信内容を確認させていただき、3営業日以内にご連絡させていただきます。
@@ -96,8 +96,8 @@ class ContactUS extends Component {
                   <span className="notice">※</span>は入力必須項目です。
                 </small>
               </p>
-              <div className="page-main-form">
-                <div className="main">
+              <div className="contact-page-form">
+                <div className="main-form">
                   <ContactForm />
                 </div>
               </div>

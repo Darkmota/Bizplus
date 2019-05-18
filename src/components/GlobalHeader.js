@@ -117,7 +117,9 @@ class GlobelHeader extends Component {
               />
             </div>
             <div className="nav-logo ">
+              {/*  eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a className="navbar-brand " href="#">
+                {/* eslint-disable-next-line jsx-a11y/alt-text */}
                 <img src="./imgs/Biz.png" className="img-responsive" />
               </a>
               <div className="logo-font">Bizplus</div>
@@ -134,9 +136,6 @@ class GlobelHeader extends Component {
                         route.children
                         ?
                         <>
-                          <span>
-                            <FontAwesomeIcon icon={faAngleDown} className="svg-down" />
-                          </span>
                           <div className="menu-information" />
                           <ul>
                             {
@@ -144,7 +143,8 @@ class GlobelHeader extends Component {
                                 <li key={child}>
                                   <a href="#" onClick={this.goRoute.bind(this, `/${route.name}/${child}`)}>
                                     <FontAwesomeIcon icon={faArrowRight} />
-                                    {this.state.locale[child]}
+                                    {/* {this.state.locale[child]} */}
+                                    <span className="submenu-item">{this.state.locale[child]}</span>
                                   </a>
                                 </li>
                               ))
@@ -162,12 +162,6 @@ class GlobelHeader extends Component {
                     <div className="lan-txt">
                     <span>{this.state.locale.language}</span>
                     </div>
-                    <span>
-                      <FontAwesomeIcon
-                        icon={faAngleDown}
-                        className="svg-down"
-                      />
-                    </span>
                     <ul className="lan-select">
                       <li>
                         <a href="./index.html?locale=ja_JP">日本語</a>

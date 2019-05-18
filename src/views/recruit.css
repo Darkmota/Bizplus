@@ -1,0 +1,280 @@
+.caps {
+  /* 大写字母 */
+  text-transform: uppercase;
+}
+
+.recruit-container {
+  width: 100%;
+}
+
+.recruit-page-header {
+  width: 100%;
+  height: calc(55vh);
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-image: url("http://localhost:3000/imgs/findjob.jpg");
+
+}
+
+.recruit-title-container {
+  position: absolute;
+  left: 80px;
+  bottom: 0px;
+  /* width: 300px; */
+  background: #fff;
+  padding: 30px 50px;
+}
+
+.recruit-title-container h1 {
+  margin: 0;
+}
+
+.recruit-title-container svg {
+  position: absolute;
+  max-width: 90px;
+  height: 10px !important;
+  /* top: 45px; */
+}
+
+.recruit-breadcrumb {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.recruit-breadcrumb .recruit-content {
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.recruit-breadcrumb .recruit-content div {
+  display: flex;
+  justify-content: flex-end;
+  color: #4C5152;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.recruit-page-main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* color: #212529; */
+}
+
+.recruit-page-main .recruit-page-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: rgb(250, 250, 250); */
+}
+
+.recruit-page-container .recruit-page-top {
+  width: 80%;
+  margin-top: 2.5rem;
+  /* border-bottom: 2px solid #212529; */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.recruit-page-top .recruit-top-img {
+  width: 35%;
+  height: 300px;
+  background-size: cover;
+  background-position: center center;
+  background-image: url("http://localhost:3000/imgs/business/business-agency-team-working-on-new-ideas-1080x720.jpg");
+}
+
+.recruit-page-top .recruit-top-slogan {
+  width: 65%;
+  height: 300px;
+  padding: 60px 25px;
+}
+
+.recruit-page-top .recruit-top-slogan h1 {
+  color: #ec4c4c;
+  text-align: center;
+}
+
+.recruit-page-top .recruit-top-slogan h2 {
+  color: #212529;
+  text-indent: 3rem;
+}
+
+.recruit-page-top .recruit-top-img-1 {
+  width: 35%;
+  height: 300px;
+  background-size: cover;
+  background-position: center center;
+  background-image: url("http://localhost:3000/imgs/business/sketching-startup-website-ideas-on-paper_free_stock_photos_picjumbo_HNCK4890-1080x720.jpg");
+}
+
+.recruit-page-top .recruit-top-slogan-1 {
+  width: 65%;
+  height: 300px;
+  padding: 60px 25px;
+}
+
+.recruit-page-top .recruit-top-slogan-1 h2 {
+  color: #212529;
+  text-indent: 2.5rem;
+}
+
+.recruit-page-top .recruit-top-slogan-1 div {
+  font-size: 14px;
+  padding: 2.5px 10px;
+}
+
+.recruit-page-main .recruit-page-guide {
+  width: 61.8%;
+  margin-top: 5rem;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+}
+
+.recruit-page-container .recruit-page-title {
+  padding: 40px;
+  border: 2.5px solid rgb(69, 72, 73);
+}
+
+.recruit-page-title .recruit-title-inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.recruit-title-inner .inner-item-title {
+  width: 100%;
+  text-align: center;
+}
+
+.recruit-title-inner .inner-item-title h3 {
+
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 2.5rem;
+}
+
+.recruit-title-inner .inner-item {
+  width: 50%;
+  padding: 0 20px;
+}
+
+.recruit-title-inner .inner-item h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 1.5rem;
+}
+
+.recruit-title-inner .inner-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recruit-title-inner .inner-item ul li {
+  font-size: 14px;
+  font-weight: 400;
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.recruit-title-inner .inner-item-detail {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.inner-item-detail .detail-title {
+  width: 100%;
+}
+
+.inner-item-detail .detail-title h4 {
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 1rem;
+}
+
+.inner-item-detail .detail-item {
+  width: 50%;
+  padding: 0 20px;
+}
+
+.inner-item-detail .detail-item h5 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #212529f6;
+}
+
+.inner-item-detail .detail-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.inner-item-detail .detail-item ul li {
+  font-size: 14px;
+  font-weight: 400;
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.recruit-page-info {
+  width: 61.8%;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.recruit-info-container {
+  padding: 20px;
+}
+
+.recruit-info-container h3 {
+  text-align: center;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 2.5rem;
+}
+
+.recruit-list-area {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.recruit-list-area-item>dl {
+  /* display: -webkit-box; */
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.recruit-list-area-name {
+  width: 25%;
+  padding: 10px 0;
+  font-size: 15px;
+}
+
+.recruit-list-area-name {
+  border-bottom: 1px solid #777;
+  color: #142c4b;
+  font-weight: bold;
+}
+
+.recruit-list-area-name+.recruit-list-area-content {
+  margin-left: 30px;
+}
+
+.recruit-list-area-content {
+  width: calc(75%);
+  padding: 10px 0;
+}
+
+.recruit-list-area-content {
+  margin: 0;
+  border-bottom: 1px solid #d8d8d8;
+}
