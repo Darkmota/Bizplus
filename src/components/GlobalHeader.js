@@ -1,13 +1,14 @@
-import React, { Component } from "react";
+import React, { Component } from "react"
+import { findDomNode } from 'react-dom'
 import { connect } from 'react-redux'
 import { withRouter, Route, Link } from 'react-router-dom'
-import zh_CN from "../locale/zh_CN.json";
-import en_US from "../locale/en_US.json";
-import ja_JP from "../locale/ja_JP.json";
+import zh_CN from "../locale/zh_CN.json"
+import en_US from "../locale/en_US.json"
+import ja_JP from "../locale/ja_JP.json"
 import RouteName from '../config/RouteName'
 // import "../css/common.css";
-import "../css/fold.css";
-import "../css/header.css";
+import "../css/fold.css"
+import "../css/header.css"
 // import '../css/slide.css'
 // import '../css/index.css'
 // import '../css/web-end.css'
@@ -248,10 +249,10 @@ class GlobelHeader extends Component {
                   ?
                   <>
                     <span>
-                      <FontAwesomeIcon icon={faAngleDown} className="svg-down" />
+                      <FontAwesomeIcon icon={faPlus} onClick={this.handleExpendClick}/>
                     </span>
                     <div className="menu-information" />
-                    <ul>
+                    <ul style={{display:this.state.expendDisplay}}>
                       {
                         route.children.map(child => (
                           <li key={child}>

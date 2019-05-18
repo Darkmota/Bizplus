@@ -147,9 +147,4 @@
     padding-right: 8px;
     font-size: 13px;
   }
-
-  .nav-pad {
-    /* pad模式下的语言切换消失 */
-    display: none;
-  }
 }
