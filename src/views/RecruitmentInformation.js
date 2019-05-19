@@ -3,11 +3,16 @@ import { connect } from "react-redux";
 import { Menu, Icon } from "antd";
 import { withRouter, Route, Link } from "react-router-dom";
 import "./recruit.css";
+import PageHeader from "../components/PageHeader";
 
 class RecruitmentInformation extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      pageHeaderInfo: {
+        title: "contact us",
+        imgUrl: "http://localhost:3000/imgs/findjob.jpg"
+      },
       recruitListInfo: [
         {
           name: "津贴",
@@ -56,69 +61,7 @@ class RecruitmentInformation extends Component {
       <>
         <div className="recruit-container">
           {/* 页面顶部布局 */}
-          <div className="recruit-page-header">
-            <div className="recruit-title-container">
-              <h1 className="recruit-page-name caps">recruit</h1>
-              <svg
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
-                viewBox="0 0 165.4 16.4"
-              >
-                <g>
-                  <path
-                    className="st0"
-                    d="M0.7,15.1L15.1,0.7l0.5,0.5L1.1,15.6L0.7,15.1z"
-                  />
-                  <path
-                    className="st0"
-                    d="M14.2,15.1L28.7,0.7l0.5,0.5L14.8,15.6L14.2,15.1z"
-                  />
-                  <path
-                    className="st0"
-                    d="M27.8,15.1L42.2,0.7l0.5,0.5L28.3,15.6L27.8,15.1z"
-                  />
-                  <path
-                    className="st0"
-                    d="M41.3,15.1L55.8,0.7l0.5,0.5L41.9,15.6L41.3,15.1z"
-                  />
-                  <path
-                    className="st0"
-                    d="M54.9,15.1L69.3,0.7l0.5,0.5L55.4,15.6L54.9,15.1z"
-                  />
-                  <path
-                    className="st0"
-                    d="M68.4,15.1L82.9,0.7l0.5,0.5L69,15.6L68.4,15.1z"
-                  />
-                  <path
-                    className="st0"
-                    d="M82,15.1L96.4,0.7l0.5,0.5L82.5,15.6L82,15.1z"
-                  />
-                  <path
-                    className="st0"
-                    d="M95.5,15.1l14.4-14.4l0.5,0.5L96,15.6L95.5,15.1z"
-                  />
-                  <path
-                    className="st0"
-                    d="M109.1,15.1l14.4-14.4l0.5,0.5l-14.4,14.4L109.1,15.1z"
-                  />
-                  <path
-                    className="st0"
-                    d="M122.6,15.1L137,0.7l0.5,0.5l-14.4,14.4L122.6,15.1z"
-                  />
-                  <path
-                    className="st0"
-                    d="M136.2,15.1l14.4-14.4l0.5,0.5l-14.4,14.4L136.2,15.1z"
-                  />
-                  <path
-                    className="st0"
-                    d="M149.8,15.1l14.4-14.4l0.5,0.5l-14.4,14.4L149.8,15.1z"
-                  />
-                </g>
-              </svg>
-            </div>
-          </div>
+          <PageHeader {...this.state.pageHeaderInfo} />
           {/* 面包屑 */}
           <div className="recruit-breadcrumb">
             <div className="recruit-content">
@@ -129,13 +72,20 @@ class RecruitmentInformation extends Component {
           <div className="recruit-page-main">
             <div className="recruit-page-container">
               <div className="recruit-page-top">
-                <div className="recruit-top-img" />
+                <div className="recruit-top-img">
+                  <img
+                    src="http://localhost:3000/imgs/business/sketching-startup-website-ideas-on-paper_free_stock_photos_picjumbo_HNCK4890-1080x720.jpg"
+                    alt="."
+                  />
+                </div>
                 <div className="recruit-top-slogan">
                   <h1 className="caps">Will you join us?</h1>
                   <h2>
                     Bizplusはエンジニア経験の有無ではなく、前向きで成長意欲のある人を求めています！
                   </h2>
                 </div>
+              </div>
+              <div className="recruit-page-top">
                 <div className="recruit-top-slogan-1">
                   <h2>我们的希望</h2>
                   <div>我们公司成立于2014年。</div>
@@ -149,7 +99,12 @@ class RecruitmentInformation extends Component {
                   </div>
                   <div>我们期待着您的回音。</div>
                 </div>
-                <div className="recruit-top-img-1" />
+                <div className="recruit-top-img-1">
+                  <img
+                    src="http://localhost:3000/imgs/business/business-agency-team-working-on-new-ideas-1080x720.jpg"
+                    alt="."
+                  />
+                </div>
               </div>
               <div className="recruit-page-guide">
                 <div className="recruit-page-title">

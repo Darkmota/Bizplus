@@ -1,0 +1,124 @@
+.welfare-page-main {
+  display: flex;
+  justify-content: center;
+}
+
+.page-nav-container {
+  width: 80%;
+  max-width: 1080px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 40px;
+  grid-column-gap: 40px;
+}
+
+.page-nav-container .nav-grid-item {
+  height: 240px;
+}
+
+.grid-item-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  -webkit-transition-duration: .6s;
+  transition-duration: .6s;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.grid-item-inner .grid-card {
+  background-color: #fff;
+  color: #221815;
+  border: 1px solid #333;
+}
+
+.grid-item-inner .grid-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  font-weight: 600;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  cursor: pointer;
+}
+
+.grid-card .grid-card-header {
+  display: flex;
+  width: 100%;
+  height: 74px;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-card .grid-card-header p {
+  margin: 0;
+}
+
+.card-header-num {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 74px;
+  height: 74px;
+  border-top-left-radius: 10px;
+}
+
+.card-header-num:before {
+  border-width: 75px 75px 0 0;
+  border-color: #65aadd transparent transparent transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 0;
+  height: 0;
+  border-width: 75px 75px 0 0;
+  border-style: solid;
+  content: "";
+}
+
+.card-header-num span {
+  color: #fff;
+  position: relative;
+  display: block;
+  text-align: left;
+  font-weight: 600;
+  padding: 8px;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.card-header-title {
+  position: relative;
+  font-size: 22px;
+  font-weight: 500;
+  color: #221815;
+  letter-spacing: .04em;
+  line-height: 1.25;
+}
+
+.grid-card-body {
+  display: flex;
+  padding: 0 25px;
+  width: 100%;
+  height: calc(100% - 74px + 10px);
+  transform: translateY(-20px);
+  align-items: center;
+  justify-content: center;
+}
+.grid-card-body .card-body-img {
+  width: 100%;
+  height: auto;
+}
+.grid-card-body .card-body-img img {
+  max-width: 100%;
+  width: 100%;
+  vertical-align: top;
+ 
+}

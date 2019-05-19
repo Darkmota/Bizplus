@@ -1,0 +1,39 @@
+.caps {
+  /* 大写字母 */
+  text-transform: uppercase;
+}
+
+.g-container {
+  width: 100%;
+}
+
+.g-page-header {
+  width: 100%;
+  height: calc(55vh);
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-image: url("http://localhost:3000/imgs/findjob.jpg");
+
+}
+
+.g-title-container {
+  position: absolute;
+  left: 80px;
+  bottom: 0px;
+  /* width: 300px; */
+  background: #fff;
+  padding: 30px 50px;
+}
+
+.g-title-container h1 {
+  margin: 0;
+}
+
+.g-title-container svg {
+  position: absolute;
+  max-width: 90px;
+  height: 10px !important;
+  /* top: 45px; */
+}
