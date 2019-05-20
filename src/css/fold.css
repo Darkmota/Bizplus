@@ -63,6 +63,16 @@
     padding: 0.6rem 0 0.6rem 0;
   }
 
+  .expand>ul>li>a>svg {
+    font-weight: 200;
+    margin-right: 8px;
+  }
+
+  .expand>ul>li>a:before {
+    content: "／";
+    font-weight: bold;
+  }
+
   .expand>span>svg{
     float: right;
   }

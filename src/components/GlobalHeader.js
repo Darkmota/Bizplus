@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import { findDomNode } from 'react-dom'
 import { connect } from 'react-redux'
 import { withRouter, Route, Link } from 'react-router-dom'
 import zh_CN from "../locale/zh_CN.json"
@@ -22,7 +21,6 @@ import {
   faBars,
   faPlus
 } from "@fortawesome/fontawesome-free-solid";
-console.table(RouteName)
 
 class GlobelHeader extends Component {
   constructor() {
@@ -37,7 +35,11 @@ class GlobelHeader extends Component {
       //二级菜单state
       isFold: true,
       top: "-100%",
-      expendDisplay:"none",
+      expendDisplay: RouteName.map(route => ({
+        display: 'none',
+        btnRotate: '0',
+        canExpand: !!route.children
+      })),
 
       //search按钮控制input
       searchFlag: false,
@@ -45,17 +47,29 @@ class GlobelHeader extends Component {
       isSearchShow: true,
       isXShow: false
     };
-    this.handleFoldClick = this.handleFoldClick.bind(this);
-    this.handleSearchClick = this.handleSearchClick.bind(this);
   }
 
   goRoute = (link, event) => {
     event.stopPropagation()
     this.props.history.push(`${link}`)
+    
+    //页面跳转后还原二级菜单
+    let newList = Object.assign([], this.state.expendDisplay)
+    for(var i = 0;i < newList.length;i++){
+      newList[i].display = 'none'
+      newList[i].btnRotate = '0'
+    }  
+    this.setState({
+      isFold:true,
+      top: "-100%",
+      btnExpendDisplay:"block",
+      btnFoldDisplay:"none",
+      expendDisplay: newList
+    })
   }
 
   //二级菜单展开/收起
-  handleFoldClick() {
+  handleFoldClick = () => {
     if (this.state.isFold === false) {
       this.setState({
         isFold: true,
@@ -73,21 +87,23 @@ class GlobelHeader extends Component {
     }
   }
 
-  handleExpendClick = (e) => {
-    if(this.state.expendDisplay === "none"){
-      this.setState({
-        expendDisplay:"block"
-      });
-    }
-    if(this.state.expendDisplay === "block"){
-      this.setState({
-        expendDisplay:"none"
-      });
+  //二级菜单子元素展开/收起
+  handleExpendClick = (index) => {
+    let newList = Object.assign([], this.state.expendDisplay)
+    if (newList[index].canExpand) {
+      if(newList[index].display === 'none'){
+        newList[index].display = 'block'
+        newList[index].btnRotate = '45'
+      } else {
+        newList[index].display = 'none'
+        newList[index].btnRotate = '0'
+      }
+      this.setState({expendDisplay: newList})
     }
   }
 
   //搜索框展开/收起
-  handleSearchClick() {
+  handleSearchClick = () => {
     if (this.state.searchFlag === false) {
       this.setState({
         searchFlag: true,
@@ -150,7 +166,7 @@ class GlobelHeader extends Component {
                           <div className="menu-information" />
                           <ul>
                             {
-                              route.children.map(child => (
+                              route.children.map((child, index) => (
                                 <li key={child}>
                                   <a href="#" onClick={this.goRoute.bind(this, `/${route.name}/${child}`)}>
                                     <FontAwesomeIcon icon={faArrowRight} />
@@ -232,28 +248,27 @@ class GlobelHeader extends Component {
           style={{ top: this.state.top, transition: ".35s all" }}
         >
           <div style={{height:'80%',overflowY:'scroll'}}>
-
           {
-            RouteName.map(route => (
-              <div onClick={this.goRoute.bind(this, `/${route.name}`)} key={route.name} className={'second-menu-item caps' + (route.children ? ' expand' : '')}>
-                <span className="item-txt">
+            RouteName.map((route, index) => (
+              <div key={route.name} className={'second-menu-item caps' + (route.children ? ' expand' : '')}>
+                <span className="item-txt" onClick={this.goRoute.bind(this, `/${route.name}`)}>
                   {this.state.locale[route.name]}
                 </span>
                 {
                   route.children
                   ?
                   <>
-                    <span>
-                      <FontAwesomeIcon icon={faPlus} onClick={this.handleExpendClick}/>
+                    <span onClick={this.handleExpendClick.bind(this, index)}>
+                      <FontAwesomeIcon icon={faPlus} style={{transform:[`rotate(${this.state.expendDisplay[index].btnRotate}deg)`],transition: ".2s all"}}/>
                     </span>
                     <div className="menu-information" />
-                    <ul style={{display:this.state.expendDisplay}}>
+                    <ul style={{display:this.state.expendDisplay[index].display}}>
                       {
                         route.children.map(child => (
                           <li key={child}>
                             <a href="#" onClick={this.goRoute.bind(this, `/${route.name}/${child}`)}>
                               <FontAwesomeIcon icon={faArrowRight} />
-                              {this.state.locale[child]}
+                              <span className="submenu-item">{this.state.locale[child]}</span>
                             </a>
                           </li>
                         ))
