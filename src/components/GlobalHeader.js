@@ -52,6 +52,20 @@ class GlobelHeader extends Component {
   goRoute = (link, event) => {
     event.stopPropagation()
     this.props.history.push(`${link}`)
+    
+    //页面跳转后还原二级菜单
+    let newList = Object.assign([], this.state.expendDisplay)
+    for(var i = 0;i < newList.length;i++){
+      newList[i].display = 'none'
+      newList[i].btnRotate = '0'
+    }  
+    this.setState({
+      isFold:true,
+      top: "-100%",
+      btnExpendDisplay:"block",
+      btnFoldDisplay:"none",
+      expendDisplay: newList
+    })
   }
 
   //二级菜单展开/收起
