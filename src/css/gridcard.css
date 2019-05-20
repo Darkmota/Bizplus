@@ -1,59 +1,9 @@
-.welfare-container {
-  width: 100%;
-}
-
 .welfare-page-main {
-  width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.company-culture {
-  width: 80%;
-  margin-top: 1rem;
-}
-
-.culture-page-top {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.culture-top-img {
-  width: 50%;
-  padding: 80px 50px 30px 0;
-
-}
-
-.culture-top-img img {
-  width: 100%;
-  height: auto;
-  background-position: center center;
-  border-radius: 0.15rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.199);
-}
-
-.culture-top-content {
-  width: 50%;
-  padding: 0px 0 0px 50px;
-}
-
-.culture-top-content h1 {
-  text-transform: uppercase;
-  margin-bottom: 1.75rem;
-  font-size: 48px;
-}
-
-.culture-top-content h2 {
-  /* font-size: 20px; */
-}
-
-.culture-top-content p {
-  margin-bottom: 0.25rem;
-}
-
-.culture-grid-container {
+.page-nav-container {
   width: 100%;
   /* max-width: 1080px; */
   display: grid;
@@ -63,11 +13,11 @@
   grid-column-gap: 30px;
 }
 
-.culture-grid-container .culture-card-item {
+.page-nav-container .nav-grid-item {
   height: 250px;
 }
 
-.card-item-inner {
+.grid-item-inner {
   position: relative;
   width: 100%;
   height: 100%;
@@ -80,18 +30,18 @@
   transform-style: preserve-3d;
 }
 
-.card-item-inner .grid-card {
+.grid-item-inner .grid-card {
   background-color: #fff;
   color: #221815;
-
+  border: 1px solid #333;
 }
 
-.card-item-inner .grid-card {
+.grid-item-inner .grid-card {
   position: absolute;
   width: 100%;
   height: 100%;
   border-radius: 0.15rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.105);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.199);
   font-weight: 600;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -122,7 +72,7 @@
 
 .card-header-num:before {
   border-width: 75px 75px 0 0;
-  border-color: #264989 transparent transparent transparent;
+  border-color: #65aadd transparent transparent transparent;
   position: absolute;
   top: 0;
   left: 0;
@@ -163,13 +113,10 @@
   align-items: center;
   justify-content: center;
 }
-
 .grid-card-body .card-body-img {
   width: 100%;
   height: auto;
-  overflow: hidden;
 }
-
 .grid-card-body .card-body-img img {
   max-width: 100%;
   width: 100%;
