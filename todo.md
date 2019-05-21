@@ -320,4 +320,5 @@ service nginx restart
 ###徐鑫雨
   - [x] 移动端福利计划页面适配
   - [x] 移动端PageHeader组件适配
+  - [x] 优化移动端福利计划页面grid的布局
   
