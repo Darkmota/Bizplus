@@ -1,6 +1,6 @@
 import React from "react";
 import { Route } from 'react-router-dom'
-import GlobalHedaer from "./components/GlobalHeader";
+import GlobalHeader from "./components/GlobalHeader";
 import HomePage from "./views/HomePage";
 import Footer from "./components/Footer";
 import "./css/normalize.css";
@@ -8,17 +8,22 @@ import RouteName from './config/RouteName'
 
 class App extends React.Component {
   render() {
+    let jsxRoutes = []
+    for (let route of RouteName) {
+      jsxRoutes.push(<Route exact path={`/${route.name}`} key={route.name} component={route.component}/>)
+      if (route.children) {
+        for (let child of route.children) {
+          if (child.component) {
+            jsxRoutes.push(<Route exact path={`/${route.name}/${child.name}`} key={`/${route.name}/${child.name}`} component={child.component}/>)
+          }
+        }
+      }
+    }
     return (
       <div className="App">
-        <GlobalHedaer />
-        <Route exact path="/" component={HomePage}></Route>
-        {
-          RouteName.map(route => (
-            <Route path={`/${route.name}`} key={route.name} component={route.component}></Route>
-          ))
-        }
-        
-        {/* <Route parh='/contact_us' component={ContactUs}></Route> */}
+        <GlobalHeader />
+        <Route exact path="/" component={HomePage}/>
+        { jsxRoutes }
         <Footer />
       </div>
     );
