@@ -16,12 +16,8 @@ const RouteName = [
     component: Information,
     children: [
       'company_profile',
-      'business_philosophy',
-      'representative_s_greetings',
-      'privacy_policy',
       'organizational_chart',
-      'access',
-      'company_culture'
+      'security'
     ]
   },
   {
@@ -29,10 +25,7 @@ const RouteName = [
     component: BusinessField,
     children: [
       'business_summary',
-      'quality_control',
-      'project_management',
-      'development_language_and_environment',
-      'foreign_temporary_staffing_business',
+      'temporary_staffing',
       'commission_proposal',
       'other_business',
       'development_performance'
@@ -43,7 +36,7 @@ const RouteName = [
     component: Welfare,
     children: [
       'education',
-      'leisure_and_entertainment'
+      'company_culture'
     ]
   },
   {

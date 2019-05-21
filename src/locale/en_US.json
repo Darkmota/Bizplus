@@ -1,32 +1,27 @@
   {
   "language": "English",
   "homepage": "Home",
+
   "information": "Info",
   "company_profile": "Profile",
-  "business_philosophy": "Business Philosophy",
-  "representative_s_greetings": "Representative’s Greetings",
-  "privacy_policy": "Privacy Policy",
   "organizational_chart": "Organizational Chart",
-  "access": "Access",
+  "security":"security",
+
   "business_field": "Business",
   "business_summary": "Business Summary",
-  "quality_control": "Quality Control",
-  "project_management": "Project Management",
-  "development_language_and_environment": "Development Language & Environment",
-  "foreign_temporary_staffing_business": "Foreign Staffing Business",
-  "foreign_temporary_staffing_business_summary": "Respond your business promotion and support in our company.",
+  "temporary_staffing": "Staffing Business",
   "commission_proposal": "Commission Proposal",
-  "commission_proposal_summary": "Respond to any customers’ request, propose optimal solutions, and provide high level (high quality · High technology) service.",
   "other_business": "Other Business",
-  "other_business_summary": "Robot development, consulting business, Human resource education business.",
   "development_performance": "Development Performance",
-  "company_culture": "Culture",
+
   "welfare": "Welfare",
   "education": "Education",
-  "leisure_and_entertainment": "Leisure and Entertainment",
-  "medical_insurance": "Medical Insurance",
+  "company_culture": "Culture",
+
   "recruitment_information": "Recruitment",
+
   "contact_us": "Contact",
+
   "input_here": "Input here",
   "search": "Search",
   "about_our_company": "ABOUT OUR COMPANY",
