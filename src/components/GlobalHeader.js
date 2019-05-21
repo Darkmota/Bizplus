@@ -167,11 +167,11 @@ class GlobelHeader extends Component {
                           <ul>
                             {
                               route.children.map((child, index) => (
-                                <li key={child}>
-                                  <a href="#" onClick={this.goRoute.bind(this, `/${route.name}/${child}`)}>
+                                <li key={child.name}>
+                                  <a href="#" onClick={this.goRoute.bind(this, `/${route.name}/${child.name}`)}>
                                     <FontAwesomeIcon icon={faArrowRight} />
                                     {/* {this.state.locale[child]} */}
-                                    <span className="submenu-item">{this.state.locale[child]}</span>
+                                    <span className="submenu-item">{this.state.locale[child.name]}</span>
                                   </a>
                                 </li>
                               ))
@@ -265,10 +265,10 @@ class GlobelHeader extends Component {
                     <ul style={{display:this.state.expendDisplay[index].display}}>
                       {
                         route.children.map(child => (
-                          <li key={child}>
-                            <a href="#" onClick={this.goRoute.bind(this, `/${route.name}/${child}`)}>
+                          <li key={child.name}>
+                            <a href="#" onClick={this.goRoute.bind(this, `/${route.name}/${child.name}`)}>
                               <FontAwesomeIcon icon={faArrowRight} />
-                              <span className="submenu-item">{this.state.locale[child]}</span>
+                              <span className="submenu-item">{this.state.locale[child.name]}</span>
                             </a>
                           </li>
                         ))
