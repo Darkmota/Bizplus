@@ -10,6 +10,85 @@ class Welfare extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      isBlockStyle: 1, // 布尔值判断旅游日志样式的左右不同
+      travelLog: [
+        {
+          title: "1",
+          index: 0,
+          date:"2018.11.22 - 2018.11.24",
+          imgs:[
+            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
+            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
+            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
+            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
+          ],
+          content: [
+            { info: "社員が自由に発言できる環境"},
+            { info: "コミュニケーションがとれる環境"},
+            { info: "社員間での信頼感がとれていること" },
+            { info: "社員がやりがいを感じ仕事に取り組むこと"},
+            { info: "ざっくばらんに話し合いが行われている環境" },
+            { info: "職場が常に明るい雰囲気と若さのエネルギー"}
+          ]
+        },
+        {
+          title: "2",
+          index: 1,
+          date:"2018.11.22 - 2018.11.24",
+          imgs:[
+            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
+            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
+            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
+            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
+          ],
+          content: [
+            { info: "社員が自由に発言できる環境"},
+            { info: "コミュニケーションがとれる環境"},
+            { info: "社員間での信頼感がとれていること" },
+            { info: "社員がやりがいを感じ仕事に取り組むこと"},
+            { info: "ざっくばらんに話し合いが行われている環境" },
+            { info: "職場が常に明るい雰囲気と若さのエネルギー"}
+          ]
+        },
+        {
+          title: "3",
+          index: 0,
+          date:"2018.11.22 - 2018.11.24",
+          imgs:[
+            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
+            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
+            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
+            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
+          ],
+          content: [
+            { info: "社員が自由に発言できる環境"},
+            { info: "コミュニケーションがとれる環境"},
+            { info: "社員間での信頼感がとれていること" },
+            { info: "社員がやりがいを感じ仕事に取り組むこと"},
+            { info: "ざっくばらんに話し合いが行われている環境" },
+            { info: "職場が常に明るい雰囲気と若さのエネルギー"}
+          ]
+        },
+        {
+          title: "4",
+          index: 1,
+          date:"2018.11.22 - 2018.11.24",
+          imgs:[
+            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
+            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
+            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
+            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
+          ],
+          content: [
+            { info: "社員が自由に発言できる環境"},
+            { info: "コミュニケーションがとれる環境"},
+            { info: "社員間での信頼感がとれていること" },
+            { info: "社員がやりがいを感じ仕事に取り組むこと"},
+            { info: "ざっくばらんに話し合いが行われている環境" },
+            { info: "職場が常に明るい雰囲気と若さのエネルギー"}
+          ]
+        }
+      ],
       pageHeaderInfo: {
         title: "Welfare",
         imgUrl: "https://picsum.photos/1920/500"
@@ -43,7 +122,7 @@ class Welfare extends Component {
         {
           key: "01",
           title: "企业文化",
-          imgUrl: "https://www.evoworx.co.jp/recruit/img/people/i_10.svg"
+          imgUrl: "https://www.evoworx.co.jp/recruit/img/people/i_2.svg"
         },
         {
           key: "02",
@@ -85,6 +164,8 @@ class Welfare extends Component {
   }
 
   render() {
+    let jsx = []
+
     return (
       <>
         <div className="welfare-container">
@@ -93,6 +174,7 @@ class Welfare extends Component {
           <div className="welfare-page-main">
             {/* 企业文化 */}
             <div className="company-culture">
+              {/* PC端页面内头部 */}
               <div className="culture-page-top">
                 <div className="culture-top-img">
                   <img src={this.state.culturePageTop.imgUrl} alt="." />
@@ -105,6 +187,7 @@ class Welfare extends Component {
                   ))}
                 </div>
               </div>
+              {/* 移动端页面内头部 */}
               <div className="culture-page-top-mobile">
                 <div className="culture-top-content">
                   <h1>{this.state.culturePageTop.title}</h1>
@@ -118,6 +201,7 @@ class Welfare extends Component {
                 </div>
               </div>
               <div className="culture-content">
+                {/* 企业文化gridPart */}
                 <div className="culture-grid-container">
                   {this.state.cultureCard.map(info => (
                     <div className="culture-card-item">
@@ -138,6 +222,58 @@ class Welfare extends Component {
                           </div>
                         </div>
                       </div>
+                    </div>
+                  ))}
+                </div>
+                {/* 公司旅游日志 */}
+                <div className="travel-log">
+                  {this.state.travelLog.map((item) => (
+                    <div key={item.title}>
+                      {
+                        item.index === 0 
+                        ? 
+                        <div className="log-item">
+                          <div className="log-item-img">
+                            {item.imgs && item.imgs.map(img => (
+                              <img src={img.imgUrl} alt="."/>
+                            ))}
+                          </div>
+                          <div className="log-item-body">
+                              <div className="body-header">
+                                <div className="body-title">title</div>
+                                <div className="body-date">2018.11.22 - 2018.11.24</div>
+                              </div>
+                              <div className="log-body-content">
+                                <p>111111</p>
+                                <p>22222</p>
+                                {item.content && item.content.map(info => (
+                                    <p>{info.info}</p>
+                                  ))}
+                              </div> 
+                          </div>
+                        </div>
+                        : 
+                        <div className="log-item">
+                          <div className="log-item-body">
+                              <div className="body-header">
+                                <div className="body-title">title</div>
+                                <div className="body-date">2018.11.22 - 2018.11.24</div>
+                              </div>
+                              <div className="log-body-content">
+                                <p>111111</p>
+                                <p>22222</p>
+                                {item.content && item.content.map(info => (
+                                    <p>{info.info}</p>
+                                  ))}
+                              </div> 
+                          </div>
+                          <div className="log-item-img">
+                            {item.imgs && item.imgs.map(img => (
+                              <img src={img.imgUrl} alt="."/>
+                            ))}
+                          </div>
+                        </div>
+                      }
                     </div>
                   ))}
                 </div>

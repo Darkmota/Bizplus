@@ -28,7 +28,6 @@
   .culture-top-img {
     width: 50%;
     padding: 80px 50px 30px 0;
-
   }
 
   .culture-top-img img {
@@ -196,6 +195,50 @@
     max-width: 100%;
     width: auto;
   }
+
+  .travel-log {
+    width: 100%;
+    border: 1px dotted #221815;
+  }
+
+  .log-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .log-item .log-item-img {
+    width: 50%;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.199);
+  }
+
+  .log-item .log-item-img img {
+    width: 100%;
+    height: 220px;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 0.1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.199);
+  }
+
+  .log-item .log-item-body {
+    width: 50%;
+  }
+
+  .log-item-body .body-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .log-item-body .log-body-content {}
 }
 
 @media screen and (max-width:1200px) {
