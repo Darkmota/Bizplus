@@ -321,6 +321,7 @@ service nginx restart
   - [x] 移动端福利计划页面适配
   - [x] 移动端PageHeader组件适配
   - [x] 优化移动端福利计划页面grid的布局
+  - [x] 修改i18n文件
 
 ###谢强
   - [x] 企业文化页面设计 

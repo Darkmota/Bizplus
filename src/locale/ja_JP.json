@@ -1,33 +1,27 @@
 {
   "language": "日本語",
   "homepage": "ホーム",
+
   "information": "企業情報",
   "company_profile": "会社概要",
-  "business_philosophy": "理念経营",
-  "representative_s_greetings": "代表挨拶",
-  "privacy_policy": "セキュリティポリシー",
   "organizational_chart": "組織図",
-  "access": "アクセス",
+  "security":"安全性",
+
   "business_field": "事業分野",
   "business_summary": "業務概要",
-  "quality_control": "品質管理",
-  "project_management": "プロジェクト管理",
-  "development_language_and_environment": "開発言語と環境",
-  "foreign_temporary_staffing_business": "外国人材派遣事業",
-  "foreign_temporary_staffing_business_summary": "日本のIT分野において外国人技術者の派遣業務を展開しています。",
+  "temporary_staffing": "人材派遣",
   "commission_proposal": "受託開発",
-  "commission_proposal_summary": "経験豊富なPM、開発チームを活用することにより、お客様の多様なニーズに応え、 最適なソリューションを提案し、業務理解・上流設計・受入テスト等までに、レベルの高い（高品質・高技術）サービスを提供します。",
   "other_business": "その他事業概要",
-  "other_business_summary": "ロボット開発、コンサルタント、人材教育事業。",
   "development_performance": "開発実績",
-  "company_culture": "社風について",
-  "welfare": "福利厚生",
+
+  "welfare": "社員福祉",
   "education": "社内教育",
-  "welfare": "福利厚生",
-  "leisure_and_entertainment": "休暇とエンターテイメント",
-  "medical_insurance": "医療保険",
+  "company_culture": "社風について",
+
   "recruitment_information": "採用情報",
+
   "contact_us": "お問い合せ",
+
   "input_here": "ここに入力",
   "search": "検索",
   "about_our_company": "会社について",
