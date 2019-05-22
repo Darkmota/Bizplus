@@ -23,22 +23,10 @@ const RouteName = [
         name: "company_profile"
       },
       {
-        name: "business_philosophy"
-      },
-      {
-        name: "representative_s_greetings"
-      },
-      {
-        name: "privacy_policy"
-      },
-      {
         name: "organizational_chart"
       },
       {
-        name: "access"
-      },
-      {
-        name: "company_culture"
+        name: "security"
       }
     ]
   },
@@ -50,16 +38,7 @@ const RouteName = [
         name: "business_summary"
       },
       {
-        name: "quality_control"
-      },
-      {
-        name: "project_management"
-      },
-      {
-        name: "development_language_and_environment"
-      },
-      {
-        name: "foreign_temporary_staffing_business"
+        name: "temporary_staffing"
       },
       {
         name: "commission_proposal"
@@ -81,7 +60,7 @@ const RouteName = [
         component: Education
       },
       {
-        name: "leisure_and_entertainment",
+        name: "company_culture",
         component: Culture
       }
     ]
