@@ -375,3 +375,7 @@ service nginx restart
       
       - [ ] “社员福利”页面
         - [ ] 企业文化卡片内容
+
+##2019-5-22
+###徐鑫雨
+ - [ ] 修改RouteName.js内name与i18n的对应关系
