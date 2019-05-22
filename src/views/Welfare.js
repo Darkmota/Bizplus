@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Menu, Icon } from "antd";
 import { withRouter, Route, Link } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
 // import GridCard from "../components/GridCard";
@@ -10,17 +9,17 @@ class Welfare extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isBlockStyle: 1, // 布尔值判断旅游日志样式的左右不同
+      partTitle:['一些有趣的数据', '旅游日志'], 
       travelLog: [
         {
-          title: "1",
+          title: "公司第四次旅游",
           index: 0,
           date:"2018.11.22 - 2018.11.24",
           imgs:[
-            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
-            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
-            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
-            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
+            {imgUrl:"https://picsum.photos/id/248/250/250"},
+            {imgUrl:"https://picsum.photos/id/249/250/250"},
+            {imgUrl:"https://picsum.photos/id/250/250/250"},
+            {imgUrl:"https://picsum.photos/id/251/250/250"},
           ],
           content: [
             { info: "社員が自由に発言できる環境"},
@@ -32,14 +31,14 @@ class Welfare extends Component {
           ]
         },
         {
-          title: "2",
+          title: "公司第三次旅游",
           index: 1,
           date:"2018.11.22 - 2018.11.24",
           imgs:[
-            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
-            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
-            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
-            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
+            {imgUrl:"https://picsum.photos/id/252/250/250"},
+            {imgUrl:"https://picsum.photos/id/253/250/250"},
+            {imgUrl:"https://picsum.photos/id/254/250/250"},
+            {imgUrl:"https://picsum.photos/id/255/250/250"},
           ],
           content: [
             { info: "社員が自由に発言できる環境"},
@@ -51,14 +50,14 @@ class Welfare extends Component {
           ]
         },
         {
-          title: "3",
+          title: "公司第二次旅游",
           index: 0,
           date:"2018.11.22 - 2018.11.24",
           imgs:[
-            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
-            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
-            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
-            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
+            {imgUrl:"https://picsum.photos/id/241/250/250"},
+            {imgUrl:"https://picsum.photos/id/242/250/250"},
+            {imgUrl:"https://picsum.photos/id/243/250/250"},
+            {imgUrl:"https://picsum.photos/id/244/250/250"},
           ],
           content: [
             { info: "社員が自由に発言できる環境"},
@@ -70,14 +69,14 @@ class Welfare extends Component {
           ]
         },
         {
-          title: "4",
+          title: "公司第一次旅游",
           index: 1,
           date:"2018.11.22 - 2018.11.24",
           imgs:[
-            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
-            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
-            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
-            {imgUrl:"http://localhost:3000/imgs/welfare.jpg"},
+            {imgUrl:"https://picsum.photos/id/235/250/250"},
+            {imgUrl:"https://picsum.photos/id/236/250/250"},
+            {imgUrl:"https://picsum.photos/id/247/250/250"},
+            {imgUrl:"https://picsum.photos/id/238/250/250"},
           ],
           content: [
             { info: "社員が自由に発言できる環境"},
@@ -94,7 +93,7 @@ class Welfare extends Component {
         imgUrl: "https://picsum.photos/1920/500"
       },
       culturePageTop: {
-        imgUrl: "http://localhost:3000/imgs/welfare.jpg",
+        imgUrl: "https://picsum.photos/500/500",
         title: "Corporate Style",
         subTitle: "Bizplusの特徴以下の社風を目標としています。",
         content: [
@@ -164,8 +163,6 @@ class Welfare extends Component {
   }
 
   render() {
-    let jsx = []
-
     return (
       <>
         <div className="welfare-container">
@@ -202,6 +199,7 @@ class Welfare extends Component {
               </div>
               <div className="culture-content">
                 {/* 企业文化gridPart */}
+                <h1 className="page-part-title">{this.state.partTitle[0]}</h1>
                 <div className="culture-grid-container">
                   {this.state.cultureCard.map(info => (
                     <div className="culture-card-item">
@@ -226,6 +224,8 @@ class Welfare extends Component {
                   ))}
                 </div>
                 {/* 公司旅游日志 */}
+                <h1 className="page-part-title">{this.state.partTitle[1]}
+                </h1>
                 <div className="travel-log">
                   {this.state.travelLog.map((item) => (
                     <div key={item.title}>
@@ -233,19 +233,19 @@ class Welfare extends Component {
                         item.index === 0 
                         ? 
                         <div className="log-item">
-                          <div className="log-item-img">
-                            {item.imgs && item.imgs.map(img => (
-                              <img src={img.imgUrl} alt="."/>
-                            ))}
+                          <div className="log-item-show">
+                            <div className="log-item-img">
+                              {item.imgs && item.imgs.map(img => (
+                                <img src={img.imgUrl} alt="."/>
+                              ))}
+                            </div>
                           </div>
                           <div className="log-item-body">
                               <div className="body-header">
-                                <div className="body-title">title</div>
-                                <div className="body-date">2018.11.22 - 2018.11.24</div>
+                                <h1>{item.title}</h1>
+                                <label>{item.date}</label>
                               </div>
                               <div className="log-body-content">
-                                <p>111111</p>
-                                <p>22222</p>
                                 {item.content && item.content.map(info => (
                                     <p>{info.info}</p>
                                   ))}
@@ -256,21 +256,21 @@ class Welfare extends Component {
                         <div className="log-item">
                           <div className="log-item-body">
                               <div className="body-header">
-                                <div className="body-title">title</div>
-                                <div className="body-date">2018.11.22 - 2018.11.24</div>
+                                <h1>{item.title}</h1>
+                                <label>{item.date}</label>
                               </div>
                               <div className="log-body-content">
-                                <p>111111</p>
-                                <p>22222</p>
                                 {item.content && item.content.map(info => (
                                     <p>{info.info}</p>
                                   ))}
                               </div> 
                           </div>
-                          <div className="log-item-img">
-                            {item.imgs && item.imgs.map(img => (
-                              <img src={img.imgUrl} alt="."/>
-                            ))}
+                          <div className="log-item-show">
+                            <div className="log-item-img">
+                              {item.imgs && item.imgs.map(img => (
+                                <img src={img.imgUrl} alt="."/>
+                              ))}
+                            </div>
                           </div>
                         </div>
                       }

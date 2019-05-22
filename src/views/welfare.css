@@ -19,6 +19,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    /* margin-bottom: 1.6rem; */
   }
 
   .culture-page-top-mobile {
@@ -27,12 +28,13 @@
 
   .culture-top-img {
     width: 50%;
-    padding: 80px 50px 30px 0;
+    padding: 30px 50px 30px 0;
   }
 
   .culture-top-img img {
     width: 100%;
     height: auto;
+    max-height: 485px;
     background-position: center center;
     border-radius: 0.15rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.199);
@@ -65,7 +67,7 @@
     grid-template-rows: 1fr 1fr;
     grid-row-gap: 30px;
     grid-column-gap: 30px;
-    padding: 0 0 96px;
+    padding: 1.6rem 0;
   }
 
   .culture-grid-container .culture-card-item {
@@ -198,7 +200,6 @@
 
   .travel-log {
     width: 100%;
-    border: 1px dotted #221815;
   }
 
   .log-item {
@@ -208,11 +209,16 @@
     align-items: center;
   }
 
-  .log-item .log-item-img {
+  .log-item .log-item-show {
     width: 50%;
-    padding: 5px;
+    padding: 3.4%;
+  }
+
+  .log-item .log-item-img {
+    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    padding: 5px;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-row-gap: 5px;
     grid-column-gap: 5px;
@@ -222,23 +228,55 @@
   .log-item .log-item-img img {
     width: 100%;
     height: 220px;
+    max-height: 260px;
     background-position: center center;
     background-size: cover;
     border-radius: 0.1rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.199);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.199); */
   }
 
   .log-item .log-item-body {
     width: 50%;
+    padding: 3.4%;
   }
 
   .log-item-body .body-header {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    padding: 15px 0;
+    align-items: center;
+    margin-bottom: 3.2rem;
   }
 
-  .log-item-body .log-body-content {}
+  .log-item-body .body-header h1 {
+    font-size: 25.6px;
+    color: #221815;
+    flex: 1;
+    margin: 0;
+  }
+
+  .log-item-body .body-header label {
+    font-family: Georgia;
+    font-size: 18px;
+    color: #ec4c4c;
+    font-weight: 500;
+    margin: 0;
+    padding-right: 1.6rem;
+  }
+
+  .log-item-body .log-body-content {
+    font-size: 16px;
+  }
+
+  .log-item-body .log-body-content p {
+    margin-bottom: 0.618rem;
+  }
+
+  .page-part-title {
+    text-align: center;
+    padding: 0.68rem 0;
+    margin: 0;
+  }
 }
 
 @media screen and (max-width:1200px) {

@@ -378,4 +378,8 @@ service nginx restart
 
 ##2019-5-22
 ###徐鑫雨
- - [ ] 修改RouteName.js内name与i18n的对应关系
+  - [ ] 修改RouteName.js内name与i18n的对应关系
+
+###谢强
+  - [x] 企业文化页面设计完成
+  - [x] header样式修改
