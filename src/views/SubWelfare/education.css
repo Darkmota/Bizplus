@@ -32,7 +32,7 @@
 .education-top-img {
   width: 61.8vw;
   height: 61.8vh;
-  max-height: 470px;
+  max-height: 450px;
   min-height: 300px;
   position: absolute;
   left: 160px;
@@ -41,7 +41,6 @@
   border-radius: 0.15rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 
 .education-top-content {
   position: absolute;
@@ -79,42 +78,99 @@
 }
 
 .education-main-content {
-  padding: 0 160px;
+  padding: 0 140px;
+  /* height: 1080px; */
 }
 
 .main-content-inner {}
 
 .education-main-content .education-container {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-row-gap: 30px;
-  grid-column-gap: 30px;
-  /* padding: 1.6rem 0; */
-}
 .education-container .education-item {
-  width: 100%;
+  width: 50%;
+  padding: 20px;
+  /* flex-wrap: wrap; */
+  /* flex-grow: 1; */
+  /* display: flex; */
+
 }
+
 .education-item .education-item-header {
   border-radius: 0.125rem;
   /* border: 1px dotted #333; */
-  box-shadow: 0px 1px 2px rgba(0,0,0,.1);
-  
 }
-.education-item-header .item-header-img {
-  width: 100%;
-  /* height: 40vh; */
-  height: 300px;
+
+.education-item .item-header-img {
+  left: 0;
+  width: 85%;
+  height: 200px;
+  max-height: 240px;
   background-size: cover;
   background-position: center center;
 }
-.item-header-title {
-  background-color: #fff;
-  font-size: 20px;
-  padding: 5px;
-}
+
 .education-item-body {
-  padding: 5px;
-  background-color: #fff;height: 300px;
+  /* z-index: 5; */
+  position: relative;
+  top: -80px;
+  left: 80px;
+  width: calc(100% - 80px);
+  /* height: 300px; */
+
+  background-color: #fff;
+  padding: 20px 40px;
+  border-radius: 0.15rem;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, .1);
+}
+
+.education-item-body .item-body-title h2 {
+  margin-bottom: 1.6rem;
+}
+
+.education-item-body .item-body-title svg {
+  max-width: 90px;
+  height: 10px !important;
+  position: absolute;
+  top: 56px;
+}
+
+.education-item-body p {
+  font-size: 14px;
+  margin-bottom: 0.25rem;
+}
+
+.education-teach {
+  width: 100%;
+  border: 1px dotted #333;
+  padding: 20px;
+}
+
+.education-teach-inner {
+  width: 100%;
+  border: 1px dotted #333;
+}
+
+.education-teach-header h2 {
+  border-bottom: 1px solid rgba(51, 51, 51, 0.753);
+  margin-bottom: 1.2rem;
+}
+
+.education-teach-body {
+  /* border: 1px dotted #333; */
+  display: flex;
+}
+
+.education-teach-body .teach-body-info {
+  width: 40%;
+  border: 1px dotted #333;
+  height: 300px;
+}
+
+.education-teach-body .teach-body-table {
+  width: 60%;
+  border: 1px dotted #333;
+  height: 300px;
 }
