@@ -414,3 +414,6 @@ service nginx restart
 
 ##2019-5-29
 ###谢强
+  - [x] 新闻详情页
+  - [x] BackTop-btn
+  - [x] 公司简介页面

@@ -10,7 +10,7 @@
   
   .g-page-header {
     width: 100%;
-    height: calc(55vh);
+    height: calc(55vh - 80px);
     overflow: hidden;
     position: relative;
     background-size: cover;
@@ -50,7 +50,7 @@
   
   .g-page-header {
     width: 100%;
-    height: calc(55vh);
+    height: calc(50vh);
     overflow: hidden;
     position: relative;
     background-size: cover;

@@ -86,6 +86,7 @@ class HomePage extends Component {
       newsInfo: [
         {
           tag: "研讨会",
+          tagColor: "geekblue",
           date: "2019.04.25",
           title: "开展了研讨会，确定了下一个季度的发展方向",
           url: "news",
@@ -93,6 +94,7 @@ class HomePage extends Component {
         },
         {
           tag: "人事调动",
+          tagColor: "red",
           date: "2019.04.25",
           title: "将赤木先生调度到人事部门",
           url: "news",
@@ -100,6 +102,7 @@ class HomePage extends Component {
         },
         {
           tag: "通知",
+          tagColor: "#87d068",
           date: "2019.04.25",
           title: "本部搬迁通知",
           url: "news",
@@ -107,6 +110,7 @@ class HomePage extends Component {
         },
         {
           tag: "通知",
+          tagColor: "blue",
           date: "2019.04.25",
           title: "5月1日将要进行纪念活动",
           url: "news",
@@ -159,11 +163,12 @@ class HomePage extends Component {
           <PartTitle title={"our services"} />
           <div className="cards-container">
             <div className="cards-inner">
-              {this.state.cardServeInfo && this.state.cardServeInfo.map(info => (
-                <div className="cards-item" key={info.key}>
-                  <CardMask {...info} />
-                </div>
-              ))}
+              {this.state.cardServeInfo &&
+                this.state.cardServeInfo.map(info => (
+                  <div className="cards-item" key={info.key}>
+                    <CardMask {...info} />
+                  </div>
+                ))}
             </div>
           </div>
           <BtnMore {...this.state.btnInfo} />

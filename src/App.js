@@ -1,5 +1,6 @@
 import React from "react";
 import { Route } from 'react-router-dom'
+import { BackTop } from 'antd';
 import GlobalHeader from "./components/GlobalHeader";
 import HomePage from "./views/HomePage";
 import Footer from "./components/Footer";
@@ -27,6 +28,10 @@ class App extends React.Component {
         { jsxRoutes }
         <Route path="/news/:id" component={NewsInfo}/>
         <Footer />
+        {/* BackTop */}
+        <div>
+          <BackTop />
+        </div>
       </div>
     );
   }

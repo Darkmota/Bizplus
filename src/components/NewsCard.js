@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { Route, Link } from 'react-router-dom';
-import NewsInfo from '../views/NewsInfo'
+import { Route, Link } from "react-router-dom";
+import { Tag } from "antd";
+import NewsInfo from "../views/NewsInfo";
 import "../css/newscard.css";
 
 export default class NewsCard extends Component {
@@ -8,6 +9,7 @@ export default class NewsCard extends Component {
     super(props);
     this.state = {
       tag: props.tag,
+      tagColor: props.tagColor,
       date: props.date,
       title: props.title,
       url: props.url,
@@ -18,14 +20,10 @@ export default class NewsCard extends Component {
     return (
       <div className="news-card">
         <p className="topics-content">
-          <Link to={`/news/${this.state.query}`} >
-              {this.state.title}01
-          </Link>
+          <Link to={`/news/${this.state.query}`}>{this.state.title}</Link>
         </p>
         <div className="topics-date">
-          <span className="topics-tag">
-            <span data-i18n-text="news_1_label">{this.state.tag}</span>
-          </span>
+          <Tag color={this.state.tagColor}>{this.state.tag}</Tag>
           <span className="topics-time">{this.state.date}</span>
         </div>
       </div>

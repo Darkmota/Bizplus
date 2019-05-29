@@ -9,7 +9,7 @@
 }
 
 .company-education {
-  width: 100vw;
+  width: 100%;
 
 }
 
@@ -121,7 +121,7 @@
   /* height: 300px; */
 
   background-color: #fff;
-  padding: 20px 40px;
+  padding: 20px 20px;
   border-radius: 0.15rem;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, .1);
 }

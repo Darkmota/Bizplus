@@ -9,6 +9,7 @@ import Education from "../views/SubWelfare/Education";
 import Culture from "../views/SubWelfare/Culture";
 // 企业情报子页面
 import OrganizationChart from "../views/SubInformation/OrganizationChart";
+import CompanyProfile from "../views/SubInformation/CompanyProfile";
 
 // 事业概要子页面
 import Achievements from "../views/SubBusinessField/Achievements";
@@ -23,7 +24,8 @@ const RouteName = [
     component: Information,
     children: [
       {
-        name: "company_profile"
+        name: "company_profile",
+        component: CompanyProfile
       },
       {
         name: "organizational_chart",
