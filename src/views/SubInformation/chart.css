@@ -1,0 +1,15 @@
+.chart-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.chart-img {
+  width: 80%;
+  margin: 80px 80px;
+}
+
+.chart-img img {
+  width: 100%;
+  height: auto;
+}

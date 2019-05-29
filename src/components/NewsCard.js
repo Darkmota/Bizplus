@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Route, Link } from 'react-router-dom';
+import NewsInfo from '../views/NewsInfo'
 import "../css/newscard.css";
 
 export default class NewsCard extends Component {
@@ -8,16 +10,17 @@ export default class NewsCard extends Component {
       tag: props.tag,
       date: props.date,
       title: props.title,
-      url: props.url
+      url: props.url,
+      query: props.query
     };
   }
   render() {
     return (
       <div className="news-card">
         <p className="topics-content">
-          <a href={this.state.url} data-i18n-text="news_1_title">
-            {this.state.title}
-          </a>
+          <Link to={`/news/${this.state.query}`} >
+              {this.state.title}01
+          </Link>
         </p>
         <div className="topics-date">
           <span className="topics-tag">

@@ -5,6 +5,7 @@ import HomePage from "./views/HomePage";
 import Footer from "./components/Footer";
 import "./css/normalize.css";
 import RouteName from './config/RouteName'
+import NewsInfo from './views/NewsInfo'
 
 class App extends React.Component {
   render() {
@@ -24,6 +25,7 @@ class App extends React.Component {
         <GlobalHeader />
         <Route exact path="/" component={HomePage}/>
         { jsxRoutes }
+        <Route path="/news/:id" component={NewsInfo}/>
         <Footer />
       </div>
     );

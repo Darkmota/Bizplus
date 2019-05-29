@@ -88,25 +88,29 @@ class HomePage extends Component {
           tag: "研讨会",
           date: "2019.04.25",
           title: "开展了研讨会，确定了下一个季度的发展方向",
-          url: "news"
+          url: "news",
+          query: "001"
         },
         {
           tag: "人事调动",
           date: "2019.04.25",
           title: "将赤木先生调度到人事部门",
-          url: "news"
+          url: "news",
+          query: "002"
         },
         {
           tag: "通知",
           date: "2019.04.25",
           title: "本部搬迁通知",
-          url: "news"
+          url: "news",
+          query: "003"
         },
         {
           tag: "通知",
           date: "2019.04.25",
           title: "5月1日将要进行纪念活动",
-          url: "news"
+          url: "news",
+          query: "004"
         }
       ],
       eventInfo: [
@@ -155,7 +159,7 @@ class HomePage extends Component {
           <PartTitle title={"our services"} />
           <div className="cards-container">
             <div className="cards-inner">
-              {this.state.cardServeInfo.map(info => (
+              {this.state.cardServeInfo && this.state.cardServeInfo.map(info => (
                 <div className="cards-item" key={info.key}>
                   <CardMask {...info} />
                 </div>

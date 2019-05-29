@@ -5,10 +5,13 @@ import BusinessField from "../views/BusinessField";
 import Welfare from "../views/Welfare";
 import RecruitmentInformation from "../views/RecruitmentInformation";
 // 福利计划子页面
-import Education from '../views/SubWelfare/Education'
-import Culture from '../views/SubWelfare/Culture'
-// import Education from '../wiews/SubWelfare/Education'
-// import Culture from '../wiews/SubWelfare/Culture'
+import Education from "../views/SubWelfare/Education";
+import Culture from "../views/SubWelfare/Culture";
+// 企业情报子页面
+import OrganizationChart from "../views/SubInformation/OrganizationChart";
+
+// 事业概要子页面
+import Achievements from "../views/SubBusinessField/Achievements";
 
 const RouteName = [
   {
@@ -23,7 +26,8 @@ const RouteName = [
         name: "company_profile"
       },
       {
-        name: "organizational_chart"
+        name: "organizational_chart",
+        component: OrganizationChart
       },
       {
         name: "security"
@@ -47,7 +51,8 @@ const RouteName = [
         name: "other_business"
       },
       {
-        name: "development_performance"
+        name: "development_performance",
+        component: Achievements
       }
     ]
   },
