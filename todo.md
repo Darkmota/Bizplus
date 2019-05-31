@@ -417,3 +417,7 @@ service nginx restart
   - [x] 新闻详情页
   - [x] BackTop-btn
   - [x] 公司简介页面
+
+##2019-5-31
+###徐鑫雨
+  - [x]修改图片引用路径 

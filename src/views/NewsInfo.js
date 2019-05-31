@@ -12,7 +12,7 @@ class NewsInfo extends Component {
     this.state = {
       newsInfoHeader: {
         title: "新闻页",
-        imgUrl: "http://localhost:3000/imgs/findjob.jpg"
+        imgUrl: "./imgs/findjob.jpg"
       }
     };
   }
