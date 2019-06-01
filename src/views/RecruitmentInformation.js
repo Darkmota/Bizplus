@@ -11,7 +11,7 @@ class RecruitmentInformation extends Component {
     this.state = {
       pageHeaderInfo: {
         title: "contact us",
-        imgUrl: "http://localhost:3000/imgs/findjob.jpg"
+        imgUrl: "./imgs/findjob.jpg"
       },
       recruitListInfo: [
         {
@@ -74,7 +74,7 @@ class RecruitmentInformation extends Component {
               <div className="recruit-page-top">
                 <div className="recruit-top-img">
                   <img
-                    src="http://localhost:3000/imgs/business/sketching-startup-website-ideas-on-paper_free_stock_photos_picjumbo_HNCK4890-1080x720.jpg"
+                    src="./imgs/business/sketching-startup-website-ideas-on-paper_free_stock_photos_picjumbo_HNCK4890-1080x720.jpg"
                     alt="."
                   />
                 </div>
@@ -101,7 +101,7 @@ class RecruitmentInformation extends Component {
                 </div>
                 <div className="recruit-top-img-1">
                   <img
-                    src="http://localhost:3000/imgs/business/business-agency-team-working-on-new-ideas-1080x720.jpg"
+                    src="./imgs/business/business-agency-team-working-on-new-ideas-1080x720.jpg"
                     alt="."
                   />
                 </div>
