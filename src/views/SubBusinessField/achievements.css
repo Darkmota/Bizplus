@@ -1,3 +1,7 @@
+.achivevment-page-top {
+  text-align: center;
+  margin-top: 4rem;
+}
 .achievement-container {
   width: 100%;
   display: flex;
@@ -5,8 +9,8 @@
 }
 
 .container-inner {
-  width: 80%;
-  margin: 80px 80px;
+  width: 74%;
+  margin: 0px 80px 80px;
   display: flex;
   flex-wrap: wrap;
 }

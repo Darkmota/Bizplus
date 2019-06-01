@@ -11,6 +11,7 @@
     "antd": "^3.19.1",
     "google-map-react": "^1.1.4",
     "grade-js": "^1.0.10",
+    "http-proxy-middleware": "^0.19.1",
     "normalize": "^0.3.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

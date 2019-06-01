@@ -1,20 +1,12 @@
-.welfare-page-main {
-  display: flex;
-  justify-content: center;
-}
-
+ 
 .page-nav-container {
-  width: 100%;
-  /* max-width: 1080px; */
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-row-gap: 30px;
-  grid-column-gap: 30px;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .page-nav-container .nav-grid-item {
-  height: 250px;
+  width: 224px;
+  height: 224px;
 }
 
 .grid-item-inner {
@@ -33,7 +25,6 @@
 .grid-item-inner .grid-card {
   background-color: #fff;
   color: #221815;
-  border: 1px solid #333;
 }
 
 .grid-item-inner .grid-card {
@@ -72,7 +63,7 @@
 
 .card-header-num:before {
   border-width: 75px 75px 0 0;
-  border-color: #65aadd transparent transparent transparent;
+  border-color: #264989 transparent transparent transparent;
   position: absolute;
   top: 0;
   left: 0;
@@ -97,7 +88,7 @@
 
 .card-header-title {
   position: relative;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
   color: #221815;
   letter-spacing: .04em;
@@ -119,6 +110,7 @@
 }
 .grid-card-body .card-body-img img {
   max-width: 100%;
-  width: 100%;
+  width: 80%;
+  height: 100%;
   vertical-align: top;
 }

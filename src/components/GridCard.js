@@ -8,79 +8,33 @@ class GridCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      pageNavCard: [
-        {
-          key: "01",
-          title: "企业文化",
-          imgUrl: "https://www.evoworx.co.jp/recruit/img/people/i_5.svg"
-        },
-        {
-          key: "01",
-          title: "企业文化",
-          imgUrl: "https://www.evoworx.co.jp/recruit/img/people/i_5.svg"
-        },
-        {
-          key: "01",
-          title: "企业文化",
-          imgUrl: "https://www.evoworx.co.jp/recruit/img/people/i_5.svg"
-        },
-        {
-          key: "01",
-          title: "企业文化",
-          imgUrl: "https://www.evoworx.co.jp/recruit/img/people/i_5.svg"
-        },
-        {
-          key: "01",
-          title: "企业文化",
-          imgUrl: "https://www.evoworx.co.jp/recruit/img/people/i_5.svg"
-        },
-        {
-          key: "01",
-          title: "企业文化",
-          imgUrl: "https://www.evoworx.co.jp/recruit/img/people/i_5.svg"
-        },
-        {
-          key: "01",
-          title: "企业文化",
-          imgUrl: "https://www.evoworx.co.jp/recruit/img/people/i_5.svg"
-        },
-        {
-          key: "01",
-          title: "企业文化",
-          imgUrl: "https://www.evoworx.co.jp/recruit/img/people/i_5.svg"
-        }
-      ]
+      name: props.name,
+      title: props.title,
+      imgUrl: props.imgUrl
     };
   }
-
+  
   render() {
     return (
       <>
-        <div className="subnav">
-          {/* 福利计划页面内导航 */}
-          <div className="welfare-page-main">
-            <div className="page-nav-container">
-              {this.state.pageNavCard.map(info => (
-                <div className="nav-grid-item">
-                  <div className="grid-item-inner">
-                    <div className="grid-card">
-                      <div className="grid-card-header">
-                        <p className="card-header-num">
-                          <span>{info.key}</span>
-                        </p>
-                        <p className="card-header-title">
-                          <span>{info.title}</span>
-                        </p>
-                      </div>
-                      <div className="grid-card-body">
-                        <div class="card-body-img">
-                          <img src={info.imgUrl} alt="." />
-                        </div>
-                      </div>
-                    </div>
+        <div className="page-nav-container">
+          <div className="nav-grid-item">
+            <div className="grid-item-inner">
+              <div className="grid-card">
+                <div className="grid-card-header">
+                  <p className="card-header-num">
+                    <span>{this.state.name}</span>
+                  </p>
+                  <p className="card-header-title">
+                    <span>{this.state.title}</span>
+                  </p>
+                </div>
+                <div className="grid-card-body">
+                  <div class="card-body-img">
+                    <img src={this.state.imgUrl} alt="." />
                   </div>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </div>

@@ -13,6 +13,9 @@ import CompanyProfile from "../views/SubInformation/CompanyProfile";
 
 // 事业概要子页面
 import Achievements from "../views/SubBusinessField/Achievements";
+import BusinessIntro from "../views/SubBusinessField/BusinessIntro";
+import OtherServices from "../views/SubBusinessField/OtherServices";
+import TalentDispatch from "../views/SubBusinessField/TalentDispatch";
 
 const RouteName = [
   {
@@ -41,16 +44,19 @@ const RouteName = [
     component: BusinessField,
     children: [
       {
-        name: "business_summary"
+        name: "business_summary",
+        component: BusinessIntro
       },
       {
-        name: "temporary_staffing"
+        name: "temporary_staffing",
+        component: TalentDispatch
       },
       {
         name: "commission_proposal"
       },
       {
-        name: "other_business"
+        name: "other_business",
+        component: OtherServices
       },
       {
         name: "development_performance",

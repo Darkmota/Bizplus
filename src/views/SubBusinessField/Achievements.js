@@ -179,6 +179,11 @@ class Achievements extends Component {
       <>
         <div className="achievement-page">
           <PageHeader {...this.state.pageHeaderInfo} />
+          <div className="achivevment-page-top">
+            <div className="">
+              <h1>Achievements</h1>
+            </div>
+          </div>
           <div className="achievement-container">
             <div className="container-inner">
               {this.state.achievementsData &&

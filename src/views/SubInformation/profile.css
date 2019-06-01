@@ -112,3 +112,59 @@
 .m-tc-5 {
   border-bottom: 1px solid #e8e8e8;
 }
+
+.speak-title {
+  text-align: center;
+
+}
+
+.speak-title h1 {
+  font-size: 26px;
+}
+
+.speak-content-img {
+  width: 800px;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+}
+
+.content-img-duration {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  padding: 5px 40px;
+  background-color: #fff;
+  border-radius: 0.15rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.img-duration-info {
+  font-size: 20px;
+  margin-top: 10px;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.speak-content-txt {
+  width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 17px;
+}
+
+.speak-content-txt p:last-child {
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin-top: 2rem;
+}
