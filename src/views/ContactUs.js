@@ -12,7 +12,7 @@ class ContactUS extends Component {
     this.state = {
       pageHeaderInfo: {
         title: "contact us",
-        imgUrl: "./imgs/main-information.jpg"
+        imgUrl: "./imgs/views/main-information.jpg"
       }
     };
   }

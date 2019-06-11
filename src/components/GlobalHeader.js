@@ -147,7 +147,7 @@ class GlobelHeader extends Component {
               {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a className="navbar-brand " href="#">
                 {/* eslint-disable-next-line jsx-a11y/alt-text */}
-                <img src="./imgs/Biz.png" className="img-responsive" />
+                <img src="./imgs/logo/biz.png" className="img-responsive" />
               </a>
               <div className="logo-font">Bizplus</div>
             </div>

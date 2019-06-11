@@ -11,7 +11,7 @@ class RecruitmentInformation extends Component {
     this.state = {
       pageHeaderInfo: {
         title: "contact us",
-        imgUrl: "./imgs/findjob.jpg"
+        imgUrl: "./imgs/views/findjob.jpg"
       },
       recruitListInfo: [
         {

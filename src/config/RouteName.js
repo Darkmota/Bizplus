@@ -16,6 +16,7 @@ import Achievements from "../views/SubBusinessField/Achievements";
 import BusinessIntro from "../views/SubBusinessField/BusinessIntro";
 import OtherServices from "../views/SubBusinessField/OtherServices";
 import TalentDispatch from "../views/SubBusinessField/TalentDispatch";
+import OutsourcingSolutions from "../views/SubBusinessField/OutsourcingSolutions";
 
 const RouteName = [
   {
@@ -52,7 +53,8 @@ const RouteName = [
         component: TalentDispatch
       },
       {
-        name: "commission_proposal"
+        name: "commission_proposal",
+        component: OutsourcingSolutions
       },
       {
         name: "other_business",

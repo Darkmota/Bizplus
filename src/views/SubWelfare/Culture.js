@@ -199,7 +199,7 @@ class Culture extends Component {
               </div>
               <div className="culture-content">
                 {/* 企业文化gridPart */}
-                <h1 className="page-part-title">{this.state.partTitle[0]}</h1>
+                <h2 className="page-part-title">{this.state.partTitle[0]}</h2>
                 <div className="culture-grid-container">
                   {this.state.cultureCard.map(info => (
                     <div className="culture-card-item">
@@ -224,8 +224,8 @@ class Culture extends Component {
                   ))}
                 </div>
                 {/* 公司旅游日志 */}
-                <h1 className="page-part-title">{this.state.partTitle[1]}
-                </h1>
+                <h2 className="page-part-title">{this.state.partTitle[1]}
+                </h2>
                 <div className="travel-log">
                   {this.state.travelLog.map((item) => (
                     <div key={item.title}>

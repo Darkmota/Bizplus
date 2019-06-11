@@ -168,19 +168,6 @@ class TalentDispatch extends Component {
           <PageHeader {...this.state.pageHeaderInfo} />
           <div className="talent-dispatch-top">
             <h1>Talent Dispatch</h1>
-            <div className="page-top-svg">
-              <svg viewBox="0 0 610.7 172.9">
-                <path
-                  stroke="#000"
-                  fill="none"
-                  strokeWidth="1"
-                  strokeDasharray="2000"
-                  strokeDashoffset="0"
-                  d="M0.3,0.4 240.9,172.4 610.7,172.4 "
-                  style={{ opacity: "1" }}
-                />
-              </svg>
-            </div>
             <div className="talent-dispatch-desc">
               <div className="talent-dis-txt">
                 <h3>

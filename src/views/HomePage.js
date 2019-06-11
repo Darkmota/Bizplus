@@ -231,7 +231,7 @@ class HomePage extends Component {
         {/* maps */}
         <PartTitle title={"where we are?"} />
         <div className="map">
-          <Map />
+          {/* <Map /> */}
         </div>
       </div>
     );
