@@ -30,15 +30,12 @@ class Carousal extends Component {
         <Carousel ref="slide" effect="fade">
           <div className="slide-img">
             <img src="./imgs/business/354-1920x968.jpg" alt="" />
-            {/* <h1>1111</h1> */}
           </div>
           <div className="slide-img">
             <img src="./imgs/business/418-1920x968.jpg" alt="" />
-            {/* <h1>2222</h1> */}
           </div>
           <div className="slide-img">
             <img src="./imgs/business/857-1920x968.jpg" alt="" />
-            {/* <h1>3333</h1> */}
           </div>
         </Carousel>
         <div
